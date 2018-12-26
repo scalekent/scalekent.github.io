@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://scalekent.github.io/"/>
-  <updated>2018-12-26T02:21:09.291Z</updated>
+  <updated>2018-12-26T11:19:20.029Z</updated>
   <id>http://scalekent.github.io/</id>
   
   <author>
@@ -15,6 +15,58 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>日记 2018.12.26</title>
+    <link href="http://scalekent.github.io/2018/12/26/%E6%97%A5%E8%AE%B0%202018.12.26/"/>
+    <id>http://scalekent.github.io/2018/12/26/日记 2018.12.26/</id>
+    <published>2018-12-26T11:27:37.000Z</published>
+    <updated>2018-12-26T11:19:20.029Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！</p></blockquote><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1545795669/github/2018.12.26.png" alt=""><br>▲ Google New Tab Page</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;blockquote&gt;
+&lt;p&gt;最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/up
+      
+    
+    </summary>
+    
+    
+      <category term="Diary" scheme="http://scalekent.github.io/tags/Diary/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>日记 2018.12.26</title>
+    <link href="http://scalekent.github.io/2018/12/25/%E6%97%A5%E8%AE%B0%202018.12.25/"/>
+    <id>http://scalekent.github.io/2018/12/25/日记 2018.12.25/</id>
+    <published>2018-12-25T14:37:37.000Z</published>
+    <updated>2018-12-26T11:17:14.413Z</updated>
+    
+    <content type="html"><![CDATA[<p>今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。</p><blockquote><p>有人问我“你为什么自己不参与到其中去一起happy呢？”<br>可能只是我的个人的一种爱好吧。</p></blockquote><p>我并不怎么懂心理学，但我也知道其实我感受到的喜悦心情并不是什么为了掩盖自己的无奈之类的情感。</p><blockquote><p>我想，可能是因为有一种快乐，能让我忘记时间，而有一种快乐，是能让我更在意时间。<br>很庆幸自己还有时间可以度过！</p></blockquote><p><br><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545822643/github/IMG_1708.jpg" alt=""><br>▲ 使用了快4年的手机，换张屏幕贴膜依旧看起来像新的。</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;有人问我“你为什么自己不参与到其中去一起happy呢？”&lt;br&gt;可能只是我的个人的一种爱好吧。&lt;/p&gt;
+&lt;/blockq
+      
+    
+    </summary>
+    
+    
+      <category term="Diary" scheme="http://scalekent.github.io/tags/Diary/"/>
+    
+  </entry>
   
   <entry>
     <title>使用Python作FFT（快速傅里叶转换）</title>
@@ -44,11 +96,11 @@
   </entry>
   
   <entry>
-    <title>ANSYS Icepak cp3 技术特征及GUI详解</title>
-    <link href="http://scalekent.github.io/2018/12/24/ANSYS-Icepak-cp3-%E6%8A%80%E6%9C%AF%E7%89%B9%E5%BE%81%E5%8F%8AGUI%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://scalekent.github.io/2018/12/24/ANSYS-Icepak-cp3-技术特征及GUI详解/</id>
+    <title>ANSYS Icepak 技术特征及GUI详解</title>
+    <link href="http://scalekent.github.io/2018/12/24/ANSYS%20Icepak%20%E6%8A%80%E6%9C%AF%E7%89%B9%E5%BE%81%E5%8F%8AGUI%E8%AF%A6%E8%A7%A3/"/>
+    <id>http://scalekent.github.io/2018/12/24/ANSYS Icepak 技术特征及GUI详解/</id>
     <published>2018-12-24T07:40:19.000Z</published>
-    <updated>2018-12-26T02:45:48.600Z</updated>
+    <updated>2018-12-26T11:16:38.964Z</updated>
     
     <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="ANSYS-Icepak-详细技术特征"><a href="#ANSYS-Icepak-详细技术特征" class="headerlink" title="ANSYS Icepak 详细技术特征"></a>ANSYS Icepak 详细技术特征</h2><p>ANSYS 的三大产品体系：流体力学、结构动力学，及电磁学。通过Workbench平台可以实现电子产品的多物理场耦合模拟计算。</p><p>ANSYS Icepak 的散热尺度级别：</p><blockquote><p>• 环境级  （数据中心、外太空等）<br>• 系统级  （电子设备机箱、机柜等）<br>• PCB板级  （PCB板级的热分析）<br>• 元器件级  （电子模块、芯片封装级的热分析）</p></blockquote><h3 id="快速几何建模"><a href="#快速几何建模" class="headerlink" title="快速几何建模"></a>快速几何建模</h3><p>• 基于对象建模：用户可以使用建模工具栏调用现成的预定义模型，而无须从点、线、面开始建模。</p><p>• 丰富的几何模型</p><p>• 大量的模型库和材料库</p><p>• Icepak可以导入各类主流CAD软体的几何模型文件（Igs、Stp、Asm等）</p>]]></content>
     
