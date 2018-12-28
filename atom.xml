@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title>Scale Kent</title>
+  <title>Scale&#39;s Blog</title>
   
   
   <link href="/atom.xml" rel="self"/>
@@ -170,30 +170,6 @@
     
     </summary>
     
-    
-  </entry>
-  
-  <entry>
-    <title>test</title>
-    <link href="http://scalekent.github.io/2018/12/23/test/"/>
-    <id>http://scalekent.github.io/2018/12/23/test/</id>
-    <published>2018-12-23T04:29:10.000Z</published>
-    <updated>2018-12-25T06:16:44.991Z</updated>
-    
-    <content type="html"><![CDATA[<p> this is just a test for website.!</p><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1545648531/github/twitter_icon04.png" alt="test"></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt; this is just a test for website.!&lt;/p&gt;
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1545648531/github/twitter_icon04.p
-      
-    
-    </summary>
-    
-    
-      <category term="test" scheme="http://scalekent.github.io/tags/test/"/>
     
   </entry>
   
