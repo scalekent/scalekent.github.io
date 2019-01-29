@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title><![CDATA[ANSYS Icepak 从零开始的快捷键与使用技巧]]></title>
+    <url>%2F2019%2F01%2F29%2FANSYS%20Icepak%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <content type="text"><![CDATA[背景、单位修改、用户自定义库背景、单位修改： Edit - Preferences - Options - Display or Defaults - Units材料材质导热率： Model - Solid - 材料名 - Properties - Conductivity (W/m-K)转移模型、材料使用： 材料\模型 - 右键 - Add to clipboardANSYS Icepak 界面、编辑、对齐命令点、线、面选择： SHIFT + LEFT MOUSE模型实体显示： CTRL + W]]></content>
+      <tags>
+        <tag>ANSYS</tag>
+        <tag>Icepak</tag>
+        <tag>热分析</tag>
+      </tags>
+  </entry>
+  <entry>
     <title><![CDATA[MIT 8.02 ep-4]]></title>
     <url>%2F2019%2F01%2F26%2FMIT%208.02%20ep-4%2F</url>
     <content type="text"><![CDATA[]]></content>
