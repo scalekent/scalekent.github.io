@@ -4,6 +4,282 @@
   
     
     <entry>
+      <title>麦克斯韦方程式形式意义</title>
+      <link href="/2019/02/16/%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E5%BC%8F%E5%BD%A2%E5%BC%8F%E6%84%8F%E4%B9%89/"/>
+      <url>/2019/02/16/%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E5%BC%8F%E5%BD%A2%E5%BC%8F%E6%84%8F%E4%B9%89/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1957.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1958.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</title>
+      <link href="/2019/02/14/%E5%9C%A8%20ANSYS%20Icepak%20%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%83%AD%E6%95%A3%E7%9A%84%E5%88%9D%E6%AD%A5%E6%80%9D%E6%83%B3%EF%BC%88%E5%AF%B9%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BC%82%E5%BD%A2%E5%87%A0%E4%BD%95%E4%BD%93%EF%BC%89/"/>
+      <url>/2019/02/14/%E5%9C%A8%20ANSYS%20Icepak%20%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%83%AD%E6%95%A3%E7%9A%84%E5%88%9D%E6%AD%A5%E6%80%9D%E6%83%B3%EF%BC%88%E5%AF%B9%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BC%82%E5%BD%A2%E5%87%A0%E4%BD%95%E4%BD%93%EF%BC%89/</url>
+      
+        <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）"><a href="#在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）" class="headerlink" title="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）"></a>在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</h2><h3 id="模型的初步建立"><a href="#模型的初步建立" class="headerlink" title="模型的初步建立"></a>模型的初步建立</h3><p>对于复杂异形几何体，首选主流三维建模软体，如 <strong><em>UG</em></strong>、<strong><em>SOLIDWORKS</em></strong>、<strong><em>Inventor</em></strong> 等，在建模过程中，应该把所有 <strong><em>不同材质</em></strong> 、<strong><em>不同热导</em></strong> 的个体都作为零件来建立，然后在 <strong><em>组装/装配</em></strong> 中利用各种约束条件来搭建整体模型，在模型的建立过程中其实没有必要赋予模型 <strong><em>材料属性</em></strong> ，因为模型最好保存为 <strong>STEP(*step)</strong> 格式，这样在 <strong>Workbench</strong> 中，才能更好地利用 <strong>DM</strong> 来转换模型，因为那样转换的资源可以最大程度地减少。</p><h3 id="模型的转换"><a href="#模型的转换" class="headerlink" title="模型的转换"></a>模型的转换</h3><p>在 <strong>DM</strong> 中，导入 <strong>STEP</strong> 文件，点击 <strong>生成</strong> 后，检查模型的完整度与各契合度 ，然后使用 <strong>TOOL</strong> 中的转换工具将 <strong>模型</strong> 转化成 <strong><em>Icepak 认可</em></strong> 的实体，通过不断更改 <strong>模型等级参数</strong> 与观察 <strong>生成</strong> 后的转换模型，来匹配最接近实际情况的模型参数设置。<strong>TOOL</strong> 可以转换几个常用的 <strong>Icepak</strong> 实体与状态实体（如FAN、PCB、Opening等）。</p><h3 id="Icepak模型的导入"><a href="#Icepak模型的导入" class="headerlink" title="Icepak模型的导入"></a>Icepak模型的导入</h3><p>将转换完成的模型通过 <strong>WorkBench</strong> 界面从 <strong>DM</strong> setup 至 <strong>Icepak</strong> 模块，在 <strong>Icepak</strong> 模型树下查看所有模型实体的参数并修改，以下列出常用模型实体参数的应设参数：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 建立各个具有不同属性的个体零件</span><br><span class="line">&gt; 将个体零件组装成一个完整部件（各个实体均分离）</span><br><span class="line">&gt; 模型导入DM，使用TOOL转换CAD实体为Icepak认可的各类实体</span><br><span class="line">&gt; 调节模型参数，保持完整的模型外观</span><br><span class="line">&gt; 将转换后的模型通过WorkBench导入Icepak</span><br></pre></td></tr></table></figure><h3 id="网格的划分"><a href="#网格的划分" class="headerlink" title="网格的划分"></a>网格的划分</h3>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> ANSYS </tag>
+            
+            <tag> Icepak </tag>
+            
+            <tag> 热分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-16</title>
+      <link href="/2019/02/12/MIT%208.02%20ep-16/"/>
+      <url>/2019/02/12/MIT%208.02%20ep-16/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1954.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1955.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1956.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-15</title>
+      <link href="/2019/02/11/MIT%208.02%20ep-15/"/>
+      <url>/2019/02/11/MIT%208.02%20ep-15/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1952.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1953.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-14</title>
+      <link href="/2019/02/09/MIT%208.02%20ep-14/"/>
+      <url>/2019/02/09/MIT%208.02%20ep-14/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1949.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1950.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1951.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-13</title>
+      <link href="/2019/02/08/MIT%208.02%20ep-13/"/>
+      <url>/2019/02/08/MIT%208.02%20ep-13/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1946.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1947.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1948.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-12</title>
+      <link href="/2019/02/06/MIT%208.02%20ep-12/"/>
+      <url>/2019/02/06/MIT%208.02%20ep-12/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1941.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1942.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1943.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1944.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1945.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-11</title>
+      <link href="/2019/02/05/MIT%208.02%20ep-11/"/>
+      <url>/2019/02/05/MIT%208.02%20ep-11/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1938.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1939.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1940.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-10</title>
+      <link href="/2019/02/04/MIT%208.02%20ep-10/"/>
+      <url>/2019/02/04/MIT%208.02%20ep-10/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1936.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1937.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-9</title>
+      <link href="/2019/02/03/MIT%208.02%20ep-9/"/>
+      <url>/2019/02/03/MIT%208.02%20ep-9/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1933.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1934.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1935.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-8</title>
+      <link href="/2019/02/01/MIT%208.02%20ep-8/"/>
+      <url>/2019/02/01/MIT%208.02%20ep-8/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1930.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1931.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1932.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-7</title>
+      <link href="/2019/01/30/MIT%208.02%20ep-7/"/>
+      <url>/2019/01/30/MIT%208.02%20ep-7/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1928.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1929.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>ANSYS Icepak 从零开始的快捷键与使用技巧</title>
       <link href="/2019/01/29/ANSYS%20Icepak%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
       <url>/2019/01/29/ANSYS%20Icepak%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/</url>
@@ -19,6 +295,52 @@
             <tag> Icepak </tag>
             
             <tag> 热分析 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-6</title>
+      <link href="/2019/01/29/MIT%208.02%20ep-6/"/>
+      <url>/2019/01/29/MIT%208.02%20ep-6/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1925.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1926.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1927.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>MIT 8.02 ep-5</title>
+      <link href="/2019/01/28/MIT%208.02%20ep-5/"/>
+      <url>/2019/01/28/MIT%208.02%20ep-5/</url>
+      
+        <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1922.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1923.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1924.jpg" alt=""></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> MIT </tag>
+            
+            <tag> Electromagnetism </tag>
+            
+            <tag> Notes </tag>
             
         </tags>
       

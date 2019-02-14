@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://scalekent.github.io/"/>
-  <updated>2019-02-02T16:15:02.645Z</updated>
+  <updated>2019-02-14T08:45:03.002Z</updated>
   <id>http://scalekent.github.io/</id>
   
   <author>
@@ -15,6 +15,332 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>麦克斯韦方程式形式意义</title>
+    <link href="http://scalekent.github.io/2019/02/16/%E9%BA%A6%E5%85%8B%E6%96%AF%E9%9F%A6%E6%96%B9%E7%A8%8B%E5%BC%8F%E5%BD%A2%E5%BC%8F%E6%84%8F%E4%B9%89/"/>
+    <id>http://scalekent.github.io/2019/02/16/麦克斯韦方程式形式意义/</id>
+    <published>2019-02-16T07:40:19.000Z</published>
+    <updated>2019-02-14T08:45:03.002Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1957.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1958.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1957.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</title>
+    <link href="http://scalekent.github.io/2019/02/14/%E5%9C%A8%20ANSYS%20Icepak%20%E4%B8%AD%E5%BB%BA%E7%AB%8B%E7%83%AD%E6%95%A3%E7%9A%84%E5%88%9D%E6%AD%A5%E6%80%9D%E6%83%B3%EF%BC%88%E5%AF%B9%E4%BA%8E%E5%A4%8D%E6%9D%82%E5%BC%82%E5%BD%A2%E5%87%A0%E4%BD%95%E4%BD%93%EF%BC%89/"/>
+    <id>http://scalekent.github.io/2019/02/14/在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）/</id>
+    <published>2019-02-14T04:40:19.000Z</published>
+    <updated>2019-02-14T09:04:02.210Z</updated>
+    
+    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）"><a href="#在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）" class="headerlink" title="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）"></a>在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</h2><h3 id="模型的初步建立"><a href="#模型的初步建立" class="headerlink" title="模型的初步建立"></a>模型的初步建立</h3><p>对于复杂异形几何体，首选主流三维建模软体，如 <strong><em>UG</em></strong>、<strong><em>SOLIDWORKS</em></strong>、<strong><em>Inventor</em></strong> 等，在建模过程中，应该把所有 <strong><em>不同材质</em></strong> 、<strong><em>不同热导</em></strong> 的个体都作为零件来建立，然后在 <strong><em>组装/装配</em></strong> 中利用各种约束条件来搭建整体模型，在模型的建立过程中其实没有必要赋予模型 <strong><em>材料属性</em></strong> ，因为模型最好保存为 <strong>STEP(*step)</strong> 格式，这样在 <strong>Workbench</strong> 中，才能更好地利用 <strong>DM</strong> 来转换模型，因为那样转换的资源可以最大程度地减少。</p><h3 id="模型的转换"><a href="#模型的转换" class="headerlink" title="模型的转换"></a>模型的转换</h3><p>在 <strong>DM</strong> 中，导入 <strong>STEP</strong> 文件，点击 <strong>生成</strong> 后，检查模型的完整度与各契合度 ，然后使用 <strong>TOOL</strong> 中的转换工具将 <strong>模型</strong> 转化成 <strong><em>Icepak 认可</em></strong> 的实体，通过不断更改 <strong>模型等级参数</strong> 与观察 <strong>生成</strong> 后的转换模型，来匹配最接近实际情况的模型参数设置。<strong>TOOL</strong> 可以转换几个常用的 <strong>Icepak</strong> 实体与状态实体（如FAN、PCB、Opening等）。</p><h3 id="Icepak模型的导入"><a href="#Icepak模型的导入" class="headerlink" title="Icepak模型的导入"></a>Icepak模型的导入</h3><p>将转换完成的模型通过 <strong>WorkBench</strong> 界面从 <strong>DM</strong> setup 至 <strong>Icepak</strong> 模块，在 <strong>Icepak</strong> 模型树下查看所有模型实体的参数并修改，以下列出常用模型实体参数的应设参数：</p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure><h4 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 建立各个具有不同属性的个体零件</span><br><span class="line">&gt; 将个体零件组装成一个完整部件（各个实体均分离）</span><br><span class="line">&gt; 模型导入DM，使用TOOL转换CAD实体为Icepak认可的各类实体</span><br><span class="line">&gt; 调节模型参数，保持完整的模型外观</span><br><span class="line">&gt; 将转换后的模型通过WorkBench导入Icepak</span><br></pre></td></tr></table></figure><h3 id="网格的划分"><a href="#网格的划分" class="headerlink" title="网格的划分"></a>网格的划分</h3>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
+
+&lt;h2 id=&quot;在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）&quot;&gt;&lt;a href=&quot;#在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）&quot; 
+      
+    
+    </summary>
+    
+    
+      <category term="ANSYS" scheme="http://scalekent.github.io/tags/ANSYS/"/>
+    
+      <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
+    
+      <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-16</title>
+    <link href="http://scalekent.github.io/2019/02/12/MIT%208.02%20ep-16/"/>
+    <id>http://scalekent.github.io/2019/02/12/MIT 8.02 ep-16/</id>
+    <published>2019-02-12T07:40:19.000Z</published>
+    <updated>2019-02-14T08:54:37.885Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1954.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1955.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1956.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1954.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-15</title>
+    <link href="http://scalekent.github.io/2019/02/11/MIT%208.02%20ep-15/"/>
+    <id>http://scalekent.github.io/2019/02/11/MIT 8.02 ep-15/</id>
+    <published>2019-02-11T07:40:19.000Z</published>
+    <updated>2019-02-14T08:54:30.299Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1952.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1953.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1952.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-14</title>
+    <link href="http://scalekent.github.io/2019/02/09/MIT%208.02%20ep-14/"/>
+    <id>http://scalekent.github.io/2019/02/09/MIT 8.02 ep-14/</id>
+    <published>2019-02-09T07:40:19.000Z</published>
+    <updated>2019-02-14T08:54:22.633Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1949.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1950.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1951.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1949.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-13</title>
+    <link href="http://scalekent.github.io/2019/02/08/MIT%208.02%20ep-13/"/>
+    <id>http://scalekent.github.io/2019/02/08/MIT 8.02 ep-13/</id>
+    <published>2019-02-08T07:40:19.000Z</published>
+    <updated>2019-02-14T08:54:16.920Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1946.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1947.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1948.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1946.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-12</title>
+    <link href="http://scalekent.github.io/2019/02/06/MIT%208.02%20ep-12/"/>
+    <id>http://scalekent.github.io/2019/02/06/MIT 8.02 ep-12/</id>
+    <published>2019-02-06T07:40:19.000Z</published>
+    <updated>2019-02-14T08:54:10.952Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1941.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1942.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1943.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1944.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1945.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1941.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-11</title>
+    <link href="http://scalekent.github.io/2019/02/05/MIT%208.02%20ep-11/"/>
+    <id>http://scalekent.github.io/2019/02/05/MIT 8.02 ep-11/</id>
+    <published>2019-02-05T07:40:19.000Z</published>
+    <updated>2019-02-14T08:54:05.291Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1938.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1939.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1940.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1938.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-10</title>
+    <link href="http://scalekent.github.io/2019/02/04/MIT%208.02%20ep-10/"/>
+    <id>http://scalekent.github.io/2019/02/04/MIT 8.02 ep-10/</id>
+    <published>2019-02-04T07:40:19.000Z</published>
+    <updated>2019-02-14T08:53:58.628Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1936.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1937.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1936.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-9</title>
+    <link href="http://scalekent.github.io/2019/02/03/MIT%208.02%20ep-9/"/>
+    <id>http://scalekent.github.io/2019/02/03/MIT 8.02 ep-9/</id>
+    <published>2019-02-03T07:40:19.000Z</published>
+    <updated>2019-02-14T08:53:48.973Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1933.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1934.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1935.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1933.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-8</title>
+    <link href="http://scalekent.github.io/2019/02/01/MIT%208.02%20ep-8/"/>
+    <id>http://scalekent.github.io/2019/02/01/MIT 8.02 ep-8/</id>
+    <published>2019-02-01T07:40:19.000Z</published>
+    <updated>2019-02-14T08:53:34.484Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1930.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1931.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1932.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1930.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-7</title>
+    <link href="http://scalekent.github.io/2019/01/30/MIT%208.02%20ep-7/"/>
+    <id>http://scalekent.github.io/2019/01/30/MIT 8.02 ep-7/</id>
+    <published>2019-01-30T07:40:19.000Z</published>
+    <updated>2019-02-14T08:53:15.621Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1928.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1929.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1928.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
   
   <entry>
     <title>ANSYS Icepak 从零开始的快捷键与使用技巧</title>
@@ -43,6 +369,60 @@
       <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
     
       <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-6</title>
+    <link href="http://scalekent.github.io/2019/01/29/MIT%208.02%20ep-6/"/>
+    <id>http://scalekent.github.io/2019/01/29/MIT 8.02 ep-6/</id>
+    <published>2019-01-29T07:40:19.000Z</published>
+    <updated>2019-02-14T08:53:13.948Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1925.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1926.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1927.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1925.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>MIT 8.02 ep-5</title>
+    <link href="http://scalekent.github.io/2019/01/28/MIT%208.02%20ep-5/"/>
+    <id>http://scalekent.github.io/2019/01/28/MIT 8.02 ep-5/</id>
+    <published>2019-01-28T07:40:19.000Z</published>
+    <updated>2019-02-14T08:44:54.868Z</updated>
+    
+    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1922.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1923.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1924.jpg" alt=""></p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1922.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+      
+    
+    </summary>
+    
+    
+      <category term="MIT" scheme="http://scalekent.github.io/tags/MIT/"/>
+    
+      <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
+    
+      <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
     
   </entry>
   
@@ -176,273 +556,6 @@
       <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
     
       <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>《青之文学 动画版》《心》</title>
-    <link href="http://scalekent.github.io/2019/01/06/%E3%80%8A%E9%9D%92%E4%B9%8B%E6%96%87%E5%AD%A6%20%E5%8A%A8%E7%94%BB%E7%89%88%E3%80%8B%E3%80%8A%E5%BF%83%E3%80%8B/"/>
-    <id>http://scalekent.github.io/2019/01/06/《青之文学 动画版》《心》/</id>
-    <published>2019-01-06T06:28:57.000Z</published>
-    <updated>2019-01-26T11:56:56.239Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>原作者：东倾</p><p>URL: <a href="https://www.youtube.com/watch?v=tlpG4G_9DMM" target="_blank" rel="noopener">https://www.youtube.com/watch?v=tlpG4G_9DMM</a></p></blockquote><h2 id="《心》"><a href="#《心》" class="headerlink" title="《心》"></a>《心》</h2><h3 id="所谓的理解，只是误解偏差小了点罢了。"><a href="#所谓的理解，只是误解偏差小了点罢了。" class="headerlink" title="所谓的理解，只是误解偏差小了点罢了。"></a>所谓的理解，只是误解偏差小了点罢了。</h3><blockquote><p>在先生的视角里，K的遗书上写着：今年的夏天真美丽。</p><p>这是先生对世界的理解。</p></blockquote><blockquote><p>而在K的视角中，他写到的是：今年的冬天真温暖。</p></blockquote><blockquote><p>东倾：理解，其实是一个伪命题，在两种视角下的故事中，先生和K的行为表现都不一样，在他们眼中，对方都不是他们本来的样子。即使是一个简单的动作，不同的人眼里是不同的意思，因为每个人都是以自我为中心，以自我利益為核心，所以理解，不过是误解偏差小了点罢了。</p><p>这个社会人与人之间，理解是最难达到的状态。我们的基准线是尊重， 然而很多人连尊重都做不到。尊重别人的生存方式，尊重别人的想法，尊重别人的选择，又有多少人能够做到。</p></blockquote><blockquote><p>有些时候，人们总是会无视一些差别、又或是夸大一些差别，是因为与自己的意愿相违，亦或是自己没有能力去掌控。</p></blockquote>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;原作者：东倾&lt;/p&gt;
-&lt;p&gt;URL: &lt;a href=&quot;https://www.youtube.com/watch?v=tlpG4G_9DMM&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;https://www.youtube.
-      
-    
-    </summary>
-    
-    
-      <category term="Anime" scheme="http://scalekent.github.io/tags/Anime/"/>
-    
-      <category term="文学" scheme="http://scalekent.github.io/tags/%E6%96%87%E5%AD%A6/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ANSYS Icepak 热仿真建模专题</title>
-    <link href="http://scalekent.github.io/2018/12/30/ANSYS%20Icepak%20%E7%83%AD%E4%BB%BF%E7%9C%9F%E4%B8%93%E9%A2%98/"/>
-    <id>http://scalekent.github.io/2018/12/30/ANSYS Icepak 热仿真专题/</id>
-    <published>2018-12-30T11:45:37.000Z</published>
-    <updated>2019-01-26T11:57:30.382Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="ANSYS" scheme="http://scalekent.github.io/tags/ANSYS/"/>
-    
-      <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
-    
-      <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ANSYS Icepak 热仿真建模</title>
-    <link href="http://scalekent.github.io/2018/12/29/ANSYS%20Icepak%20%E7%83%AD%E4%BB%BF%E7%9C%9F%E5%BB%BA%E6%A8%A1/"/>
-    <id>http://scalekent.github.io/2018/12/29/ANSYS Icepak 热仿真建模/</id>
-    <published>2018-12-29T07:41:52.000Z</published>
-    <updated>2019-01-26T11:57:34.450Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="ANSYS" scheme="http://scalekent.github.io/tags/ANSYS/"/>
-    
-      <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
-    
-      <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>CIE Paper Report 2018.12.28</title>
-    <link href="http://scalekent.github.io/2018/12/28/CIE%20Paper%20Report%202018.12.28/"/>
-    <id>http://scalekent.github.io/2018/12/28/CIE Paper Report 2018.12.28/</id>
-    <published>2018-12-28T11:00:52.000Z</published>
-    <updated>2019-01-26T11:57:42.962Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="A-STUDY-OF-VISUAL-TARGET-VISIBILITY-IN-MESOPIC-VISION-BASED-ON-ELECTROENCEPHALOGRAM"><a href="#A-STUDY-OF-VISUAL-TARGET-VISIBILITY-IN-MESOPIC-VISION-BASED-ON-ELECTROENCEPHALOGRAM" class="headerlink" title="A STUDY OF VISUAL TARGET VISIBILITY IN MESOPIC VISION BASED ON ELECTROENCEPHALOGRAM"></a>A STUDY OF VISUAL TARGET VISIBILITY IN MESOPIC VISION BASED ON ELECTROENCEPHALOGRAM</h2><h3 id="引用-Paper-来源："><a href="#引用-Paper-来源：" class="headerlink" title="引用 Paper 来源："></a>引用 Paper 来源：</h3><blockquote><p>A STUDY OF VISUAL TARGET VISIBILITY IN MESOPIC VISION BASED ON ELECTROENCEPHALOGRAM<br>Shi, Yunyang1, Tu, Yan1, Wang, Lili1, Chen, Ziyi1, Wang, Zichen1<br>1 Joint International Research Laboratory of Information Display and Visualization, School of<br>Electronic Science and Engineering, Southeast University, Nanjing, CHINA<br><a href="mailto:tuyan@seu.edu.cn" target="_blank" rel="noopener">tuyan@seu.edu.cn</a></p></blockquote><h3 id="报告内容："><a href="#报告内容：" class="headerlink" title="报告内容："></a>报告内容：</h3><blockquote><p>报告者： Lu Siyu</p></blockquote><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%871.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%872.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%873.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%874.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%875.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%876.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%877.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%878.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%879.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8710.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8711.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8712.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8713.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8714.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8715.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8716.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8717.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8718.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8719.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8720.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8721.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8722.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8723.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8724.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8725.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994607/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8726.png" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545994617/github/cie_paper_21/%E5%B9%BB%E7%81%AF%E7%89%8727.png" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-
-
-&lt;h2 id=&quot;A-STUDY-OF-VISUAL-TARGET-VISIBILITY-IN-MESOPIC-VISION-BASED-ON-ELECTROENCEPHALOGRAM&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="paper" scheme="http://scalekent.github.io/tags/paper/"/>
-    
-      <category term="CIE" scheme="http://scalekent.github.io/tags/CIE/"/>
-    
-      <category term="Optics" scheme="http://scalekent.github.io/tags/Optics/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日记 2018.12.26</title>
-    <link href="http://scalekent.github.io/2018/12/26/%E6%97%A5%E8%AE%B0%202018.12.26/"/>
-    <id>http://scalekent.github.io/2018/12/26/日记 2018.12.26/</id>
-    <published>2018-12-26T11:27:37.000Z</published>
-    <updated>2018-12-26T11:19:20.029Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！</p></blockquote><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1545795669/github/2018.12.26.png" alt=""><br>▲ Google New Tab Page</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/up
-      
-    
-    </summary>
-    
-    
-      <category term="Diary" scheme="http://scalekent.github.io/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日记 2018.12.25</title>
-    <link href="http://scalekent.github.io/2018/12/25/%E6%97%A5%E8%AE%B0%202018.12.25/"/>
-    <id>http://scalekent.github.io/2018/12/25/日记 2018.12.25/</id>
-    <published>2018-12-25T14:37:37.000Z</published>
-    <updated>2018-12-27T05:05:51.019Z</updated>
-    
-    <content type="html"><![CDATA[<p>今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。</p><blockquote><p>有人问我“你为什么自己不参与到其中去一起happy呢？”<br>可能只是我的个人的一种爱好吧。</p></blockquote><p>我并不怎么懂心理学，但我也知道其实我感受到的喜悦心情并不是什么为了掩盖自己的无奈之类的情感。</p><blockquote><p>我想，可能是因为有一种快乐，能让我忘记时间，而有一种快乐，是能让我更在意时间。<br>很庆幸自己还有时间可以度过！</p></blockquote><p><br><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545822643/github/IMG_1708.jpg" alt=""><br>▲ 使用了快4年的手机，换张屏幕贴膜依旧看起来像新的。</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。&lt;/p&gt;
-&lt;blockquote&gt;
-&lt;p&gt;有人问我“你为什么自己不参与到其中去一起happy呢？”&lt;br&gt;可能只是我的个人的一种爱好吧。&lt;/p&gt;
-&lt;/blockq
-      
-    
-    </summary>
-    
-    
-      <category term="Diary" scheme="http://scalekent.github.io/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>使用Python作FFT（快速傅里叶转换）</title>
-    <link href="http://scalekent.github.io/2018/12/25/%E4%BD%BF%E7%94%A8Python%E4%BD%9CFFT%EF%BC%88%E5%BF%AB%E9%80%9F%E5%82%85%E9%87%8C%E5%8F%B6%E8%BD%AC%E6%8D%A2%EF%BC%89/"/>
-    <id>http://scalekent.github.io/2018/12/25/使用Python作FFT（快速傅里叶转换）/</id>
-    <published>2018-12-25T02:45:37.000Z</published>
-    <updated>2018-12-27T04:59:59.627Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="使用-Python-作FFT-时频转换"><a href="#使用-Python-作FFT-时频转换" class="headerlink" title="使用 Python 作FFT 时频转换"></a>使用 Python 作FFT 时频转换</h2><h3 id="引入"><a href="#引入" class="headerlink" title="引入"></a>引入</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br></pre></td></tr></table></figure><h3 id="设定函数"><a href="#设定函数" class="headerlink" title="设定函数"></a>设定函数</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">Fs = 100                         # sampling rate</span><br><span class="line">Ts = 1.0/Fs                      # sampling interval</span><br><span class="line">t = np.arange(0,1,Ts)            # time vector</span><br><span class="line">ff = 5                           # frequency of the signal</span><br><span class="line">y = np.sin(2 * np.pi * ff * t)</span><br><span class="line"></span><br><span class="line">### 图表一设定</span><br><span class="line"></span><br><span class="line">``` bach</span><br><span class="line">plt.subplot(2,1,1)</span><br><span class="line">plt.plot(t,y,&apos;b-&apos;)</span><br><span class="line">plt.xlabel(&apos;time&apos;)</span><br><span class="line">plt.ylabel(&apos;amplitude&apos;)</span><br></pre></td></tr></table></figure><h3 id="设定图表二横纵坐标"><a href="#设定图表二横纵坐标" class="headerlink" title="设定图表二横纵坐标"></a>设定图表二横纵坐标</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">plt.subplot(2,1,2)</span><br><span class="line">n = len(y)                       # length of the signal</span><br><span class="line">k = np.arange(n)</span><br><span class="line">T = n/Fs</span><br><span class="line">frq = k/T # two sides frequency range</span><br><span class="line">freq = frq[range(int(n/2))]           # one side frequency range</span><br></pre></td></tr></table></figure><h3 id="FFT"><a href="#FFT" class="headerlink" title="FFT"></a>FFT</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Y = np.fft.fft(y)/n              # fft computing and normalization</span><br><span class="line">Y = Y[range(int(n/2))]</span><br></pre></td></tr></table></figure><h3 id="图表二设定"><a href="#图表二设定" class="headerlink" title="图表二设定"></a>图表二设定</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">plt.plot(freq, abs(Y), &apos;r-&apos;)</span><br><span class="line">plt.xlabel(&apos;freq (Hz)&apos;)</span><br><span class="line">plt.ylabel(&apos;|Y(freq)|&apos;)</span><br></pre></td></tr></table></figure><h3 id="显示图表"><a href="#显示图表" class="headerlink" title="显示图表"></a>显示图表</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">plt.show()</span><br></pre></td></tr></table></figure><h3 id="完整代码："><a href="#完整代码：" class="headerlink" title="完整代码："></a>完整代码：</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">import numpy as np</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line"></span><br><span class="line">Fs = 100                         # sampling rate</span><br><span class="line">Ts = 1.0/Fs                      # sampling interval</span><br><span class="line">t = np.arange(0,1,Ts)            # time vector</span><br><span class="line">ff = 5                           # frequency of the signal</span><br><span class="line">y = np.sin(2 * np.pi * ff * t)</span><br><span class="line"></span><br><span class="line">plt.subplot(2,1,1)</span><br><span class="line">plt.plot(t,y,&apos;b-&apos;)</span><br><span class="line">plt.xlabel(&apos;time&apos;)</span><br><span class="line">plt.ylabel(&apos;amplitude&apos;)</span><br><span class="line"></span><br><span class="line">plt.subplot(2,1,2)</span><br><span class="line">n = len(y)                       # length of the signal</span><br><span class="line">k = np.arange(n)</span><br><span class="line">T = n/Fs</span><br><span class="line">frq = k/T # two sides frequency range</span><br><span class="line">freq = frq[range(int(n/2))]           # one side frequency range</span><br><span class="line"></span><br><span class="line">Y = np.fft.fft(y)/n              # fft computing and normalization</span><br><span class="line">Y = Y[range(int(n/2))]</span><br><span class="line"></span><br><span class="line">plt.plot(freq, abs(Y), &apos;r-&apos;)</span><br><span class="line">plt.xlabel(&apos;freq (Hz)&apos;)</span><br><span class="line">plt.ylabel(&apos;|Y(freq)|&apos;)</span><br><span class="line"></span><br><span class="line">plt.show()</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-
-&lt;h2 id=&quot;使用-Python-作FFT-时频转换&quot;&gt;&lt;a href=&quot;#使用-Python-作FFT-时频转换&quot; class=&quot;headerlink&quot; title=&quot;使用 Pytho
-      
-    
-    </summary>
-    
-    
-      <category term="Python" scheme="http://scalekent.github.io/tags/Python/"/>
-    
-      <category term="FFT" scheme="http://scalekent.github.io/tags/FFT/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ANSYS Icepak 技术特征及GUI详解</title>
-    <link href="http://scalekent.github.io/2018/12/24/ANSYS%20Icepak%20%E6%8A%80%E6%9C%AF%E7%89%B9%E5%BE%81%E5%8F%8AGUI%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://scalekent.github.io/2018/12/24/ANSYS Icepak 技术特征及GUI详解/</id>
-    <published>2018-12-24T07:40:19.000Z</published>
-    <updated>2019-01-26T11:57:24.188Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="ANSYS-Icepak-详细技术特征"><a href="#ANSYS-Icepak-详细技术特征" class="headerlink" title="ANSYS Icepak 详细技术特征"></a>ANSYS Icepak 详细技术特征</h2><p>ANSYS 的三大产品体系：流体力学、结构动力学，及电磁学。通过Workbench平台可以实现电子产品的多物理场耦合模拟计算。</p><p>ANSYS Icepak 的散热尺度级别：</p><blockquote><p>• 环境级  （数据中心、外太空等）<br>• 系统级  （电子设备机箱、机柜等）<br>• PCB板级  （PCB板级的热分析）<br>• 元器件级  （电子模块、芯片封装级的热分析）</p></blockquote><h3 id="快速几何建模"><a href="#快速几何建模" class="headerlink" title="快速几何建模"></a>快速几何建模</h3><blockquote><p>• 基于对象建模：用户可以使用建模工具栏调用现成的预定义模型，而无须从点、线、面开始建模。<br>• 丰富的几何模型<br>• 大量的模型库和材料库<br>• Icepak可以导入各类主流CAD软体的几何模型文件（Igs、Stp、Asm等）</p></blockquote><h3 id="优秀的网格技术"><a href="#优秀的网格技术" class="headerlink" title="优秀的网格技术"></a>优秀的网格技术</h3><h4 id="网格类型"><a href="#网格类型" class="headerlink" title="网格类型"></a>网格类型</h4><blockquote><p>• 结构化网格<br>• 非结构化网格<br>• 六面体核心网格<br>• 混合网格</p></blockquote><h4 id="Icepak-提供两种网格处理方式"><a href="#Icepak-提供两种网格处理方式" class="headerlink" title="Icepak 提供两种网格处理方式"></a>Icepak 提供两种网格处理方式</h4><blockquote><p>• 非连续性网格<br>• Multi-level 网格（针对CAD不规则几何模型，在 Icepak 中，只有对整体或局部区域使用 Mesher-HD 六面体核心网格，才能划分 Multi-level 多级网格。）</p></blockquote><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546057222/github/ANSYS%20Icepak/%E7%BD%91%E6%A0%BC%E5%88%92%E5%88%86.jpg" alt="网格划分]"></p><h3 id="对网格质量的评价、建议工具"><a href="#对网格质量的评价、建议工具" class="headerlink" title="对网格质量的评价、建议工具"></a>对网格质量的评价、建议工具</h3><p>Icepak 具有网格检测功能，即在网格生成之后自动计算网格的面对齐率、扭曲率、体积、网格的偏斜率等参数，且能在交互界面中显示较差的网格，以便改进。</p><h3 id="求解器的精度、速度与稳定性"><a href="#求解器的精度、速度与稳定性" class="headerlink" title="求解器的精度、速度与稳定性"></a>求解器的精度、速度与稳定性</h3><p>Icepak 的内核采用 Fluent 有限体积求解器，并采用多重网格加速收敛技术，能加快求解计算的收敛，同时保证搞高精度的计算结果。除此之外 Icepak 还允许用户调节松弛因子，从而使复杂工程问题的计算收敛速度更加容易控制。</p><h3 id="求解器支持的物理模型"><a href="#求解器支持的物理模型" class="headerlink" title="求解器支持的物理模型"></a>求解器支持的物理模型</h3><blockquote><p>稳态热分析、瞬态热分析；<br>层流、 湍流；<br>强迫对流、自然对流、混合对流、热辐射、固体传导；<br>不同流体介质间的热换</p></blockquote><h3 id="后处理功能"><a href="#后处理功能" class="headerlink" title="后处理功能"></a>后处理功能</h3><p>Icepak 是面向对象，完全集成的后处理环境，可以输出速度矢量图、等值面图、云团迹线图。</p><h3 id="EDA-模型接口的支持"><a href="#EDA-模型接口的支持" class="headerlink" title="EDA 模型接口的支持"></a>EDA 模型接口的支持</h3><p>Icepak 与 EDA 的接口主要是支持 IDF 格式模型（如 Mentor Graphics、Altium Designer 都可以输出）的直接输入。另外也支持 Gerber/Brd 文件导入 PCB 板。</p><blockquote><p>推荐使用 Workbench 平台下的 Design-Modeler 向 Icepak 中导入几何模型。</p></blockquote><h3 id="CAE-的协同（热流与结构、热与电的协同耦合）"><a href="#CAE-的协同（热流与结构、热与电的协同耦合）" class="headerlink" title="CAE 的协同（热流与结构、热与电的协同耦合）"></a>CAE 的协同（热流与结构、热与电的协同耦合）</h3><blockquote><p>用户可以将 CAD 模型直接读入 Design-Modeler ，再将模型传递给 Icepak ，在 Icepak 中做完热仿真后，再将 DM 中的几何模型和 Icepak 中的热仿真结果传递给 Mechanical ，完成模型的热流、结构协同仿真。</p></blockquote><blockquote><p>Icepak 可以再 workbench 下与 HFSS、Maxwell、Q3D 进行电磁与热流耦合分析，精准模拟产品在多物理情况下，各种变量的分布特性。</p></blockquote><blockquote><p>同时，Icepak 还支持与 Ansoft Siwave 进行 PCB 板电与热流的双向耦合分析。</p></blockquote><h2 id="ANSYS-Icepak-启动方式与选项"><a href="#ANSYS-Icepak-启动方式与选项" class="headerlink" title="ANSYS Icepak 启动方式与选项"></a>ANSYS Icepak 启动方式与选项</h2><h3 id="Icepak-的启动"><a href="#Icepak-的启动" class="headerlink" title="Icepak 的启动"></a>Icepak 的启动</h3><blockquote><p>方式一：使用 ANSYS 文件夹中的 Icepak 直接打开 Icepak </p></blockquote><blockquote><p>方式二：使用 WB ，并打开工具箱中的 Icepak ，这种方式通常是为了利用 Workbench（以下简称WB）中的 Design-Modeler（以下简称DM）将模型导入 Icepak。</p></blockquote><h3 id="选项设置说明"><a href="#选项设置说明" class="headerlink" title="选项设置说明"></a>选项设置说明</h3><ul><li>两种打开方式 Icepak 的界面，跳出的开始选项会不同。</li></ul><h4 id="在这里，只提一些不常见的选项设置说明："><a href="#在这里，只提一些不常见的选项设置说明：" class="headerlink" title="在这里，只提一些不常见的选项设置说明："></a>在这里，只提一些不常见的选项设置说明：</h4><blockquote><p>Unpack：主要用于解压缩 Icepak 生成的 Tzr 文件。（因为 Tzr 文件特别小，但能包含 Icepak 项目中的所有设置，因此很受工程师欢迎和使用）</p></blockquote><h2 id="ANSYS-Icepak-工作目录设定"><a href="#ANSYS-Icepak-工作目录设定" class="headerlink" title="ANSYS Icepak 工作目录设定"></a>ANSYS Icepak 工作目录设定</h2><ul><li>Icepak 的工作路径不能有中文</li></ul><p>可以将 Icepak 的快捷方式中的 <code>起始位置</code> 设置成你想要的文件保存路径。</p><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546065060/github/ANSYS%20Icepak/Icepak%E5%BF%AB%E6%8D%B7%E6%96%B9%E5%BC%8F%E8%AE%BE%E7%BD%AE.jpg" alt="Icepak快捷方式设置"></p><h2 id="ANSYS-Icepak-的用户界面（GUI）简单说明"><a href="#ANSYS-Icepak-的用户界面（GUI）简单说明" class="headerlink" title="ANSYS Icepak 的用户界面（GUI）简单说明"></a>ANSYS Icepak 的用户界面（GUI）简单说明</h2><h3 id="用户界面GUI介绍"><a href="#用户界面GUI介绍" class="headerlink" title="用户界面GUI介绍"></a>用户界面GUI介绍</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546065919/github/ANSYS%20Icepak/GUI%E8%AF%B4%E6%98%8E.jpg" alt="GUI说明"></p><h3 id="主菜单栏"><a href="#主菜单栏" class="headerlink" title="主菜单栏"></a>主菜单栏</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/11.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/12.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/13.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/14.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/15.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/16.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/17.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/18.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/19.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/20.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/21.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/22.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/23.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/24.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/25.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/26.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/27.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/28.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/29.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/30.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/31.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067166/github/ANSYS%20Icepak/32.jpg" alt=""></p><h3 id="快速工具栏"><a href="#快速工具栏" class="headerlink" title="快速工具栏"></a>快速工具栏</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067366/github/ANSYS%20Icepak/%E5%BF%AB%E6%8D%B7%E5%B7%A5%E5%85%B7.jpg" alt="快速工具栏"><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067465/github/ANSYS%20Icepak/%E5%BF%AB%E6%8D%B7%E5%B7%A5%E5%85%B72.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067465/github/ANSYS%20Icepak/%E5%BF%AB%E6%8D%B7%E5%B7%A5%E5%85%B73.jpg" alt=""></p><h3 id="模型树"><a href="#模型树" class="headerlink" title="模型树"></a>模型树</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067714/github/ANSYS%20Icepak/51.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067714/github/ANSYS%20Icepak/52.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067714/github/ANSYS%20Icepak/53.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067714/github/ANSYS%20Icepak/54.jpg" alt=""></p><h3 id="基于对象模型工具栏"><a href="#基于对象模型工具栏" class="headerlink" title="基于对象模型工具栏"></a>基于对象模型工具栏</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067804/github/ANSYS%20Icepak/61.jpg" alt=""></p><h3 id="编辑模型命令面板"><a href="#编辑模型命令面板" class="headerlink" title="编辑模型命令面板"></a>编辑模型命令面板</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067903/github/ANSYS%20Icepak/71.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067903/github/ANSYS%20Icepak/72.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067903/github/ANSYS%20Icepak/73.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067903/github/ANSYS%20Icepak/74.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067903/github/ANSYS%20Icepak/75.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546067903/github/ANSYS%20Icepak/76.jpg" alt=""></p><h3 id="对齐匹配命令"><a href="#对齐匹配命令" class="headerlink" title="对齐匹配命令"></a>对齐匹配命令</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/81.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/82.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/83.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/84.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/85.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/86.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/87.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/88.jpg" alt=""></p><h3 id="图形显示区域"><a href="#图形显示区域" class="headerlink" title="图形显示区域"></a>图形显示区域</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068044/github/ANSYS%20Icepak/89.jpg" alt=""></p><h3 id="消息窗口"><a href="#消息窗口" class="headerlink" title="消息窗口"></a>消息窗口</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068175/github/ANSYS%20Icepak/01.jpg" alt=""></p><h3 id="当前几何信息窗口"><a href="#当前几何信息窗口" class="headerlink" title="当前几何信息窗口"></a>当前几何信息窗口</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068175/github/ANSYS%20Icepak/02.jpg" alt=""></p><h3 id="模型编辑面板GUI"><a href="#模型编辑面板GUI" class="headerlink" title="模型编辑面板GUI"></a>模型编辑面板GUI</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/91.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/92.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/93.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/94.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/95.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/96.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/97.jpg" alt=""></p><h3 id="用户自定义库的建立使用"><a href="#用户自定义库的建立使用" class="headerlink" title="用户自定义库的建立使用"></a>用户自定义库的建立使用</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/101.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/102.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/103.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/104.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/105.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/106.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/107.jpg" alt=""></p><h3 id="其他常用命令操作"><a href="#其他常用命令操作" class="headerlink" title="其他常用命令操作"></a>其他常用命令操作</h3><h4 id="常用鼠标键盘操作"><a href="#常用鼠标键盘操作" class="headerlink" title="常用鼠标键盘操作"></a>常用鼠标键盘操作</h4><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/111.jpg" alt=""></p><h4 id="常用热键操作"><a href="#常用热键操作" class="headerlink" title="常用热键操作"></a>常用热键操作</h4><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/112.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/113.jpg" alt=""></p><h4 id="单位管理"><a href="#单位管理" class="headerlink" title="单位管理"></a>单位管理</h4><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1546068392/github/ANSYS%20Icepak/114.jpg" alt=""></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-
-
-&lt;h2 id=&quot;ANSYS-Icepak-详细技术特征&quot;&gt;&lt;a href=&quot;#ANSYS-Icepak-详细技术特征&quot; class=&quot;headerlink&quot; title=&quot;ANSYS I
-      
-    
-    </summary>
-    
-    
-      <category term="ANSYS" scheme="http://scalekent.github.io/tags/ANSYS/"/>
-    
-      <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
-    
-      <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>MarkDown 使用日志</title>
-    <link href="http://scalekent.github.io/2018/12/24/MarkDown-%E4%BD%BF%E7%94%A8%E6%97%A5%E5%BF%97/"/>
-    <id>http://scalekent.github.io/2018/12/24/MarkDown-使用日志/</id>
-    <published>2018-12-24T03:40:37.000Z</published>
-    <updated>2018-12-25T02:27:07.697Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="区块元素"><a href="#区块元素" class="headerlink" title="区块元素"></a>区块元素</h2><h3 id="段落和换行"><a href="#段落和换行" class="headerlink" title="段落和换行"></a>段落和换行</h3><p>一个 Markdown 段落是由一个或多个连续的文本行组成，它的前后要有一个以上的空行（空行的定义是显示上看起来像是空的，便会被视为空行。比方说，若某一行只包含空格和制表符，则该行也会被视为空行）。普通段落不该用空格或制表符来缩进。</p><p>「由一个或多个连续的文本行组成」这句话其实暗示了 Markdown 允许段落内的强迫换行（插入换行符），这个特性和其他大部分的 text-to-HTML 格式不一样（包括 Movable Type 的「Convert Line Breaks」选项），其它的格式会把每个换行符都转成 <code>&lt;br /&gt;</code> 标签。</p><p>如果你确实想要依赖 Markdown 来插入 <code>&lt;br /&gt;</code> 标签的话，在插入处先按入两个以上的空格然后回车。</p><p>• 另外，如果你想在 Markdown 中显示 <code>&lt;br /&gt;</code> 本身的话，请使用 <code></code> 来包装标签。</p><h3 id="标题"><a href="#标题" class="headerlink" title="标题"></a>标题</h3><p>Markdown 支持两种标题的语法，类 Setext 和类 atx 形式。</p><p>类 Setext 形式是用底线的形式，利用 = （最高阶标题）和 - （第二阶标题），例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">This is an H1</span><br><span class="line">=============</span><br><span class="line"></span><br><span class="line">This is an H2</span><br><span class="line">-------------</span><br></pre></td></tr></table></figure></p><p>任何数量的 = 和 - 都可以有效果。</p><p>类 Atx 形式则是在行首插入 1 到 6 个 # ，对应到标题 1 到 6 阶，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是 H1</span><br><span class="line"></span><br><span class="line">## 这是 H2</span><br><span class="line"></span><br><span class="line">###### 这是 H6</span><br></pre></td></tr></table></figure></p><p>你可以选择性地「闭合」类 atx 样式的标题，这纯粹只是美观用的，若是觉得这样看起来比较舒适，你就可以在行尾加上 #，而行尾的 # 数量也不用和开头一样（行首的井字符数量决定标题的阶数）：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"># 这是 H1 #</span><br><span class="line"></span><br><span class="line">## 这是 H2 ##</span><br><span class="line"></span><br><span class="line">### 这是 H3 ######</span><br></pre></td></tr></table></figure></p><h3 id="区块引用"><a href="#区块引用" class="headerlink" title="区块引用"></a>区块引用</h3><p>Markdown 标记区块引用是使用类似 email 中用 &gt; 的引用方式。如果你还熟悉在 email 信件中的引言部分，你就知道怎么在 Markdown 文件中建立一个区块引用，那会看起来像是你自己先断好行，然后在每行的最前面加上 &gt; ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">&gt; consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">&gt; Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line">&gt; </span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">&gt; id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure></p><p>Markdown 也允许你偷懒只在整个段落的第一行最前面加上 &gt; ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&gt; This is a blockquote with two paragraphs. Lorem ipsum dolor sit amet,</span><br><span class="line">consectetuer adipiscing elit. Aliquam hendrerit mi posuere lectus.</span><br><span class="line">Vestibulum enim wisi, viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line"></span><br><span class="line">&gt; Donec sit amet nisl. Aliquam semper ipsum sit amet velit. Suspendisse</span><br><span class="line">id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure></p><p>区块引用可以嵌套（例如：引用内的引用），只要根据层次加上不同数量的 &gt; ：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> This is the first level of quoting.</span><br><span class="line">&gt;</span><br><span class="line">&gt; &gt; This is nested blockquote.</span><br><span class="line">&gt;</span><br><span class="line">&gt; Back to the first level.</span><br></pre></td></tr></table></figure></p><p>引用的区块内也可以使用其他的 Markdown 语法，包括标题、列表、代码区块等：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">&gt; ## 这是一个标题。</span><br><span class="line">&gt; </span><br><span class="line">&gt; 1.   这是第一行列表项。</span><br><span class="line">&gt; 2.   这是第二行列表项。</span><br><span class="line">&gt; </span><br><span class="line">&gt; 给出一些例子代码：</span><br><span class="line">&gt; </span><br><span class="line">&gt;     return shell_exec(&quot;echo $input | $markdown_script&quot;);</span><br></pre></td></tr></table></figure></p><h3 id="列表"><a href="#列表" class="headerlink" title="列表"></a>列表</h3><p>Markdown 支持有序列表和无序列表。</p><p>无序列表使用星号、加号或是减号作为列表标记：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   Red</span><br><span class="line">*   Green</span><br><span class="line">*   Blue</span><br></pre></td></tr></table></figure></p><p>等同于：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">+   Red</span><br><span class="line">+   Green</span><br><span class="line">+   Blue</span><br></pre></td></tr></table></figure></p><p>也等同于：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">-   Red</span><br><span class="line">-   Green</span><br><span class="line">-   Blue</span><br></pre></td></tr></table></figure></p><p>有序列表则使用数字接着一个英文句点：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  Bird</span><br><span class="line">2.  McHale</span><br><span class="line">3.  Parish</span><br></pre></td></tr></table></figure></p><p>很重要的一点是，你在列表标记上使用的数字并不会影响输出的 HTML 结果，上面的列表所产生的 HTML 标记为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;ol&gt;</span><br><span class="line">&lt;li&gt;Bird&lt;/li&gt;</span><br><span class="line">&lt;li&gt;McHale&lt;/li&gt;</span><br><span class="line">&lt;li&gt;Parish&lt;/li&gt;</span><br><span class="line">&lt;/ol&gt;</span><br></pre></td></tr></table></figure></p><p>如果你的列表标记写成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">1.  Bird</span><br><span class="line">1.  McHale</span><br><span class="line">1.  Parish</span><br></pre></td></tr></table></figure></p><p>或甚至是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">3. Bird</span><br><span class="line">1. McHale</span><br><span class="line">8. Parish</span><br></pre></td></tr></table></figure></p><p>你都会得到完全相同的 HTML 输出。重点在于，你可以让 Markdown 文件的列表数字和输出的结果相同，或是你懒一点，你可以完全不用在意数字的正确性。</p><p>如果你使用懒惰的写法，建议第一个项目最好还是从 1. 开始，因为 Markdown 未来可能会支持有序列表的 start 属性。</p><p>列表项目标记通常是放在最左边，但是其实也可以缩进，最多 3 个空格，项目标记后面则一定要接着至少一个空格或制表符。</p><p>要让列表看起来更漂亮，你可以把内容用固定的缩进整理好：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span><br><span class="line">    Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,</span><br><span class="line">    viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line">*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.</span><br><span class="line">    Suspendisse id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure></p><p>但是如果你懒，那也行：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">*   Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</span><br><span class="line">Aliquam hendrerit mi posuere lectus. Vestibulum enim wisi,</span><br><span class="line">viverra nec, fringilla in, laoreet vitae, risus.</span><br><span class="line">*   Donec sit amet nisl. Aliquam semper ipsum sit amet velit.</span><br><span class="line">Suspendisse id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure></p><p>如果列表项目间用空行分开，在输出 HTML 时 Markdown 就会将项目内容用 </p><p> 标签包起来，举例来说：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">*   Bird</span><br><span class="line">*   Magic</span><br></pre></td></tr></table></figure></p><p>会被转换为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;Bird&lt;/li&gt;</span><br><span class="line">&lt;li&gt;Magic&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p><p>但是这个：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   Bird</span><br><span class="line"></span><br><span class="line">*   Magic</span><br></pre></td></tr></table></figure></p><p>会被转换为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul&gt;</span><br><span class="line">&lt;li&gt;&lt;p&gt;Bird&lt;/p&gt;&lt;/li&gt;</span><br><span class="line">&lt;li&gt;&lt;p&gt;Magic&lt;/p&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure></p><p>列表项目可以包含多个段落，每个项目下的段落都必须缩进 4 个空格或是 1 个制表符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">1.  This is a list item with two paragraphs. Lorem ipsum dolor</span><br><span class="line">    sit amet, consectetuer adipiscing elit. Aliquam hendrerit</span><br><span class="line">    mi posuere lectus.</span><br><span class="line"></span><br><span class="line">    Vestibulum enim wisi, viverra nec, fringilla in, laoreet</span><br><span class="line">    vitae, risus. Donec sit amet nisl. Aliquam semper ipsum</span><br><span class="line">    sit amet velit.</span><br><span class="line"></span><br><span class="line">2.  Suspendisse id sem consectetuer libero luctus adipiscing.</span><br></pre></td></tr></table></figure></p><p>如果你每行都有缩进，看起来会看好很多，当然，再次地，如果你很懒惰，Markdown 也允许：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*   This is a list item with two paragraphs.</span><br><span class="line"></span><br><span class="line">    This is the second paragraph in the list item. You&apos;re</span><br><span class="line">only required to indent the first line. Lorem ipsum dolor</span><br><span class="line">sit amet, consectetuer adipiscing elit.</span><br><span class="line"></span><br><span class="line">*   Another item in the same list.</span><br></pre></td></tr></table></figure></p><p>如果要在列表项目内放进引用，那 &gt; 就需要缩进：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">*   A list item with a blockquote:</span><br><span class="line"></span><br><span class="line">    &gt; This is a blockquote</span><br><span class="line">    &gt; inside a list item.</span><br></pre></td></tr></table></figure></p><p>如果要放代码区块的话，该区块就需要缩进两次，也就是 8 个空格或是 2 个制表符：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">*   一列表项包含一个列表区块：</span><br><span class="line"></span><br><span class="line">        &lt;代码写在这&gt;</span><br></pre></td></tr></table></figure></p><p>当然，项目列表很可能会不小心产生，像是下面这样的写法<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1986. What a great season.</span><br></pre></td></tr></table></figure></p><p>换句话说，也就是在行首出现数字-句点-空白，要避免这样的状况，你可以在句点前面加上反斜杠。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">1986\. What a great season.</span><br></pre></td></tr></table></figure></p><h3 id="代码区块"><a href="#代码区块" class="headerlink" title="代码区块"></a>代码区块</h3><p>和程序相关的写作或是标签语言原始码通常会有已经排版好的代码区块，通常这些区块我们并不希望它以一般段落文件的方式去排版，而是照原来的样子显示，Markdown 会用 <code>&lt;pre&gt;</code> 和 <code>&lt;code&gt;</code> 标签来把代码区块包起来。</p><p>要在 Markdown 中建立代码区块很简单，只要简单地缩进 4 个空格或是 1 个制表符就可以，例如，下面的输入：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">这是一个普通段落：</span><br><span class="line"></span><br><span class="line">    这是一个代码区块。</span><br></pre></td></tr></table></figure></p><p>Markdown 会转换成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;这是一个普通段落：&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;pre&gt;&lt;code&gt;这是一个代码区块。</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure></p><p>这个每行一阶的缩进（4 个空格或是 1 个制表符），都会被移除，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">Here is an example of AppleScript:</span><br><span class="line"></span><br><span class="line">    tell application &quot;Foo&quot;</span><br><span class="line">        beep</span><br><span class="line">    end tell</span><br></pre></td></tr></table></figure></p><p>会被转换为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Here is an example of AppleScript:&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;pre&gt;&lt;code&gt;tell application &quot;Foo&quot;</span><br><span class="line">    beep</span><br><span class="line">end tell</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure></p><p>一个代码区块会一直持续到没有缩进的那一行（或是文件结尾）。</p><p>在代码区块里面， &amp; 、 &lt; 和 &gt; 会自动转成 HTML 实体，这样的方式让你非常容易使用 Markdown 插入范例用的 HTML 原始码，只需要复制贴上，再加上缩进就可以了，剩下的 Markdown 都会帮你处理，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;div class=&quot;footer&quot;&gt;</span><br><span class="line">  &amp;copy; 2004 Foo Corporation</span><br><span class="line">&lt;/div&gt;</span><br></pre></td></tr></table></figure></p><p>会被转换为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;pre&gt;&lt;code&gt;&amp;lt;div class=&quot;footer&quot;&amp;gt;</span><br><span class="line">    &amp;amp;copy; 2004 Foo Corporation</span><br><span class="line">&amp;lt;/div&amp;gt;</span><br><span class="line">&lt;/code&gt;&lt;/pre&gt;</span><br></pre></td></tr></table></figure></p><p>代码区块中，一般的 Markdown 语法不会被转换，像是星号便只是星号，这表示你可以很容易地以 Markdown 语法撰写 Markdown 语法相关的文件。</p><h3 id="分隔线"><a href="#分隔线" class="headerlink" title="分隔线"></a>分隔线</h3><p>你可以在一行中用三个以上的星号、减号、底线来建立一个分隔线，行内不能有其他东西。你也可以在星号或是减号中间插入空格。下面每种写法都可以建立分隔线：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">* * *</span><br><span class="line"></span><br><span class="line">***</span><br><span class="line"></span><br><span class="line">*****</span><br><span class="line"></span><br><span class="line">- - -</span><br><span class="line"></span><br><span class="line">---------------------------------------</span><br></pre></td></tr></table></figure></p><h2 id="区段元素"><a href="#区段元素" class="headerlink" title="区段元素"></a>区段元素</h2><h3 id="链接"><a href="#链接" class="headerlink" title="链接"></a>链接</h3><p>Markdown 支持两种形式的链接语法： 行内式和参考式两种形式。</p><p>不管是哪一种，链接文字都是用 [方括号] 来标记。</p><p>要建立一个行内式的链接，只要在方块括号后面紧接着圆括号并插入网址链接即可，如果你还想要加上链接的 title 文字，只要在网址后面，用双引号把 title 文字包起来即可，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">This is [an example](http://example.com/ &quot;Title&quot;) inline link.</span><br><span class="line"></span><br><span class="line">[This link](http://example.net/) has no title attribute.</span><br></pre></td></tr></table></figure></p><p>会产生：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;This is &lt;a href=&quot;http://example.com/&quot; title=&quot;Title&quot;&gt;</span><br><span class="line">an example&lt;/a&gt; inline link.&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;&lt;a href=&quot;http://example.net/&quot;&gt;This link&lt;/a&gt; has no</span><br><span class="line">title attribute.&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><p>如果你是要链接到同样主机的资源，你可以使用相对路径：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">See my [About](/about/) page for details.</span><br></pre></td></tr></table></figure></p><p>参考式的链接是在链接文字的括号后面再接上另一个方括号，而在第二个方括号里面要填入用以辨识链接的标记：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is [an example][id] reference-style link.</span><br></pre></td></tr></table></figure></p><p>你也可以选择性地在两个方括号中间加上一个空格：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">This is [an example] [id] reference-style link.</span><br></pre></td></tr></table></figure></p><p>接着，在文件的任意处，你可以把这个标记的链接内容定义出来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[id]: http://example.com/  &quot;Optional Title Here&quot;</span><br></pre></td></tr></table></figure></p><p>链接内容定义的形式为：</p><pre><code>• 方括号（前面可以选择性地加上至多三个空格来缩进），里面输入链接文字• 接着一个冒号• 接着一个以上的空格或制表符• 接着链接的网址• 选择性地接着 title 内容，可以用单引号、双引号或是括弧包着</code></pre><p>下面这三种链接的定义都是相同：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">[foo]: http://example.com/  &quot;Optional Title Here&quot;</span><br><span class="line">[foo]: http://example.com/  &apos;Optional Title Here&apos;</span><br><span class="line">[foo]: http://example.com/  (Optional Title Here)</span><br></pre></td></tr></table></figure></p><p><code>请注意：</code>有一个已知的问题是 Markdown.pl 1.0.1 会忽略单引号包起来的链接 title。</p><p>链接网址也可以用方括号包起来：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[id]: &quot;Optional Title Here&quot;</span><br></pre></td></tr></table></figure></p><p>你也可以把 title 属性放到下一行，也可以加一些缩进，若网址太长的话，这样会比较好看：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[id]: http://example.com/longish/path/to/resource/here</span><br><span class="line">    &quot;Optional Title Here&quot;</span><br></pre></td></tr></table></figure></p><p>网址定义只有在产生链接的时候用到，并不会直接出现在文件之中。</p><p>链接辨别标签可以有字母、数字、空白和标点符号，但是并不区分大小写，因此下面两个链接是一样的：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">[link text][a]</span><br><span class="line">[link text][A]</span><br></pre></td></tr></table></figure></p><p>隐式链接标记功能让你可以省略指定链接标记，这种情形下，链接标记会视为等同于链接文字，要用隐式链接标记只要在链接文字后面加上一个空的方括号，如果你要让 “Google” 链接到 google.com，你可以简化成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Google][]</span><br></pre></td></tr></table></figure></p><p>然后定义链接内容：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Google]: http://google.com/</span><br></pre></td></tr></table></figure></p><p>由于链接文字可能包含空白，所以这种简化型的标记内也许包含多个单词：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Visit [Daring Fireball][] for more information.</span><br></pre></td></tr></table></figure></p><p>然后接着定义链接<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[Daring Fireball]: http://daringfireball.net/</span><br></pre></td></tr></table></figure></p><p>链接的定义可以放在文件中的任何一个地方，我比较偏好直接放在链接出现段落的后面，你也可以把它放在文件最后面，就像是注解一样。</p><p>下面是一个参考式链接的范例：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I get 10 times more traffic from [Google] [1] than from</span><br><span class="line">[Yahoo] [2] or [MSN] [3].</span><br><span class="line"></span><br><span class="line">  [1]: http://google.com/        &quot;Google&quot;</span><br><span class="line">  [2]: http://search.yahoo.com/  &quot;Yahoo Search&quot;</span><br><span class="line">  [3]: http://search.msn.com/    &quot;MSN Search&quot;</span><br></pre></td></tr></table></figure></p><p>如果改成用链接名称的方式写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">I get 10 times more traffic from [Google][] than from</span><br><span class="line">[Yahoo][] or [MSN][].</span><br><span class="line"></span><br><span class="line">  [google]: http://google.com/        &quot;Google&quot;</span><br><span class="line">  [yahoo]:  http://search.yahoo.com/  &quot;Yahoo Search&quot;</span><br><span class="line">  [msn]:    http://search.msn.com/    &quot;MSN Search&quot;</span><br></pre></td></tr></table></figure></p><p>上面两种写法都会产生下面的 HTML。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;I get 10 times more traffic from &lt;a href=&quot;http://google.com/&quot;</span><br><span class="line">title=&quot;Google&quot;&gt;Google&lt;/a&gt; than from</span><br><span class="line">&lt;a href=&quot;http://search.yahoo.com/&quot; title=&quot;Yahoo Search&quot;&gt;Yahoo&lt;/a&gt;</span><br><span class="line">or &lt;a href=&quot;http://search.msn.com/&quot; title=&quot;MSN Search&quot;&gt;MSN&lt;/a&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><p>下面是用行内式写的同样一段内容的 Markdown 文件，提供作为比较之用：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">I get 10 times more traffic from [Google](http://google.com/ &quot;Google&quot;)</span><br><span class="line">than from [Yahoo](http://search.yahoo.com/ &quot;Yahoo Search&quot;) or</span><br><span class="line">[MSN](http://search.msn.com/ &quot;MSN Search&quot;).</span><br></pre></td></tr></table></figure></p><p>参考式的链接其实重点不在于它比较好写，而是它比较好读，比较一下上面的范例，使用参考式的文章本身只有 81 个字符，但是用行内形式的却会增加到 176 个字元，如果是用纯 HTML 格式来写，会有 234 个字元，在 HTML 格式中，标签比文本还要多。</p><p>使用 Markdown 的参考式链接，可以让文件更像是浏览器最后产生的结果，让你可以把一些标记相关的元数据移到段落文字之外，你就可以增加链接而不让文章的阅读感觉被打断。</p><h3 id="强调"><a href="#强调" class="headerlink" title="强调"></a>强调</h3><p>Markdown 使用星号（<em>）和底线（_）作为标记强调字词的符号，被 </em> 或 _ 包围的字词会被转成用 <em> 标签包围，用两个 * 或 _ 包起来的话，则会被转成 <strong>，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">*single asterisks*</span><br><span class="line"></span><br><span class="line">_single underscores_</span><br><span class="line"></span><br><span class="line">**double asterisks**</span><br><span class="line"></span><br><span class="line">__double underscores__</span><br></pre></td></tr></table></figure></strong></em></p><p>会转成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&lt;em&gt;single asterisks&lt;/em&gt;</span><br><span class="line"></span><br><span class="line">&lt;em&gt;single underscores&lt;/em&gt;</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;double asterisks&lt;/strong&gt;</span><br><span class="line"></span><br><span class="line">&lt;strong&gt;double underscores&lt;/strong&gt;</span><br></pre></td></tr></table></figure></p><p>你可以随便用你喜欢的样式，唯一的限制是，你用什么符号开启标签，就要用什么符号结束。</p><p>强调也可以直接插在文字中间：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">un*frigging*believable</span><br></pre></td></tr></table></figure></p><p>但是如果你的 <code>*</code> 和 <code>_</code> 两边都有<code>空白</code>的话，它们就只会被当成普通的符号。</p><p>如果要在文字前后直接插入普通的星号或底线，你可以用反斜线：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\*this text is surrounded by literal asterisks\*</span><br></pre></td></tr></table></figure></p><h3 id="代码"><a href="#代码" class="headerlink" title="代码"></a>代码</h3><p>如果要标记一小段行内代码，你可以用反引号把它包起来（`），例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Use the `printf()` function.</span><br></pre></td></tr></table></figure></p><p>会产生：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Use the &lt;code&gt;printf()&lt;/code&gt; function.&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><p>如果要在代码区段内插入反引号，你可以用多个反引号来开启和结束代码区段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">``There is a literal backtick (`) here.``</span><br></pre></td></tr></table></figure></p><p>这段语法会产生：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;code&gt;There is a literal backtick (`) here.&lt;/code&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><p>代码区段的起始和结束端都可以放入一个空白，起始端后面一个，结束端前面一个，这样你就可以在区段的一开始就插入反引号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">A single backtick in a code span: `` ` ``</span><br><span class="line"></span><br><span class="line">A backtick-delimited string in a code span: `` `foo` ``</span><br></pre></td></tr></table></figure></p><p>会产生：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;A single backtick in a code span: &lt;code&gt;`&lt;/code&gt;&lt;/p&gt;</span><br><span class="line"></span><br><span class="line">&lt;p&gt;A backtick-delimited string in a code span: &lt;code&gt;`foo`&lt;/code&gt;&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><p>在代码区段内，&amp; 和方括号都会被自动地转成 HTML 实体，这使得插入 HTML 原始码变得很容易，Markdown 会把下面这段：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Please don&apos;t use any `&lt;blink&gt;` tags.</span><br></pre></td></tr></table></figure></p><p>转为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;Please don&apos;t use any &lt;code&gt;&lt;blink&gt;&lt;/code&gt; tags.&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><p>你也可以这样写：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">`&amp;#8212;` is the decimal-encoded equivalent of `&amp;mdash;`.</span><br></pre></td></tr></table></figure></p><p>以产生：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">&lt;p&gt;&lt;code&gt;&amp;amp;#8212;&lt;/code&gt; is the decimal-encoded</span><br><span class="line">equivalent of &lt;code&gt;&amp;amp;mdash;&lt;/code&gt;.&lt;/p&gt;</span><br></pre></td></tr></table></figure></p><h2 id="图片"><a href="#图片" class="headerlink" title="图片"></a>图片</h2><p>很明显地，要在纯文字应用中设计一个「自然」的语法来插入图片是有一定难度的。</p><p>Markdown 使用一种和链接很相似的语法来标记图片，同样也允许两种样式： 行内式和参考式。</p><p>行内式的图片语法看起来像是：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">![Alt text](/path/to/img.jpg)</span><br><span class="line"></span><br><span class="line">![Alt text](/path/to/img.jpg &quot;Optional title&quot;)</span><br></pre></td></tr></table></figure></p><p>详细叙述如下：</p><pre><code>• 一个惊叹号 !•接着一个方括号，里面放上图片的替代文字• 接着一个普通括号，里面放上图片的网址，最后还可以用引号包住并加上 选择性的 &apos;title&apos; 文字。</code></pre><p>参考式的图片语法则长得像这样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![Alt text][id]</span><br></pre></td></tr></table></figure></p><p>「id」是图片参考的名称，图片参考的定义方式则和连结参考一样：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[id]: url/to/image  &quot;Optional title attribute&quot;</span><br></pre></td></tr></table></figure></p><p>到目前为止， Markdown 还没有办法指定图片的宽高，如果你需要的话，你可以使用普通的 <img> 标签。</p><h2 id="其它"><a href="#其它" class="headerlink" title="其它"></a>其它</h2><h3 id="反斜杠"><a href="#反斜杠" class="headerlink" title="反斜杠"></a>反斜杠</h3><p>Markdown 可以利用反斜杠来插入一些在语法中有其它意义的符号，例如：如果你想要用星号加在文字旁边的方式来做出强调效果（但不用 <em> 标签），你可以在星号的前面加上反斜杠：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">\*literal asterisks\*</span><br></pre></td></tr></table></figure></em></p><p>Markdown 支持以下这些符号前面加上反斜杠来帮助插入普通的符号：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">\   反斜线</span><br><span class="line">`   反引号</span><br><span class="line">*   星号</span><br><span class="line">_   底线</span><br><span class="line">&#123;&#125;  花括号</span><br><span class="line">[]  方括号</span><br><span class="line">()  括弧</span><br><span class="line">#   井字号</span><br><span class="line">+   加号</span><br><span class="line">-   减号</span><br><span class="line">.   英文句点</span><br><span class="line">!   惊叹号</span><br></pre></td></tr></table></figure></p><h3 id="自动链接"><a href="#自动链接" class="headerlink" title="自动链接"></a>自动链接</h3><p>Markdown 支持以比较简短的自动链接形式来处理网址和电子邮件信箱，只要是用方括号包起来， Markdown 就会自动把它转成链接。一般网址的链接文字就和链接地址一样，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;http://example.com/&gt;</span><br></pre></td></tr></table></figure></p><p>Markdown 会转为：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;http://example.com/&quot;&gt;http://example.com/&lt;/a&gt;</span><br></pre></td></tr></table></figure></p><p>邮址的自动链接也很类似，只是 Markdown 会先做一个编码转换的过程，把文字字符转成 16 进位码的 HTML 实体，这样的格式可以糊弄一些不好的邮址收集机器人，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">&lt;address@example.com&gt;</span><br></pre></td></tr></table></figure></p><p>Markdown 会转成：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;a href=&quot;mailto:addre</span><br><span class="line">ss@example.co</span><br><span class="line">m&quot;&gt;address@exa</span><br><span class="line">mple.com&lt;/a&gt;</span><br></pre></td></tr></table></figure></p><p>在浏览器里面，这段字串（其实是 <code>&lt;a href=&quot;mailto:address@example.com&quot;&gt;address@example.com&lt;/a&gt;</code>）会变成一个可以点击的「<a href="mailto:address@example.com" target="_blank" rel="noopener">address@example.com</a>」链接。</p><p>（这种作法虽然可以糊弄不少的机器人，但并不能全部挡下来，不过总比什么都不做好些。不管怎样，公开你的信箱终究会引来广告信件的。）</p><h2 id="感谢"><a href="#感谢" class="headerlink" title="感谢"></a>感谢</h2><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">感谢:http://daringfireball.net/projects/markdown/</span><br><span class="line">感谢:https://markdown.cn/</span><br></pre></td></tr></table></figure>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-
-
-&lt;h2 id=&quot;区块元素&quot;&gt;&lt;a href=&quot;#区块元素&quot; class=&quot;headerlink&quot; title=&quot;区块元素&quot;&gt;&lt;/a&gt;区块元素&lt;/h2&gt;&lt;h3 id=&quot;段落和换行&quot;&gt;&lt;a 
-      
-    
-    </summary>
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="http://scalekent.github.io/2018/12/23/hello-world/"/>
-    <id>http://scalekent.github.io/2018/12/23/hello-world/</id>
-    <published>2018-12-23T04:26:30.672Z</published>
-    <updated>2018-12-25T06:16:36.353Z</updated>
-    
-    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p><h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p><h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p><h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p><h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure><p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot; target=&quot;_blank&quot; rel=&quot;noopener&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.
-      
-    
-    </summary>
-    
-    
-      <category term="test" scheme="http://scalekent.github.io/tags/test/"/>
     
   </entry>
   
