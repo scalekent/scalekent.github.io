@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[Maxwell's equations]]></title>
     <url>%2F2019%2F02%2F16%2FMaxwell's%20equations%2F</url>
-    <content type="text"><![CDATA[]]></content>
+    <content type="text"><![CDATA[Maxwell’s equations]]></content>
       <tags>
         <tag>MIT</tag>
         <tag>Electromagnetism</tag>
@@ -21,8 +21,8 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[ANSYS Icepak 从零开始的快捷键与使用技巧]]></title>
-    <url>%2F2019%2F01%2F29%2FANSYS%20Icepak%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
+    <title><![CDATA[ANSYS Icepak 快捷操作与使用技巧]]></title>
+    <url>%2F2019%2F01%2F29%2FANSYS%20Icepak%20%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7%2F</url>
     <content type="text"><![CDATA[背景、单位修改、用户自定义库背景、单位修改： Edit - Preferences - Options - Display or Defaults - Units材料材质导热率： Model - Solid - 材料名 - Properties - Conductivity (W/m-K)转移模型、材料使用： 材料\模型 - 右键 - Add to clipboardANSYS Icepak 界面、编辑、对齐命令点、线、面选择： SHIFT + LEFT MOUSE模型实体显示： CTRL + W]]></content>
       <tags>
         <tag>ANSYS</tag>
@@ -40,33 +40,13 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[Notes for MIT 8.02]]></title>
-    <url>%2F2019%2F01%2F21%2FNotes%20for%20MIT%208.02%2F</url>
-    <content type="text"><![CDATA[Ep-1 Ep-2 Ep-3 Ep-4 Ep-5 Ep-6 Ep-7 Ep-8 Ep-9 Ep-10 Ep-11 Ep-12 Ep-13 Ep-14 Ep-15 Ep-16]]></content>
+    <title><![CDATA[Notes for 8.02x - MIT Physics II Electricity and Magnetism]]></title>
+    <url>%2F2019%2F01%2F21%2FNotes%20for%208.02x%20-%20MIT%20Physics%20II%20Electricity%20and%20Magnetism%2F</url>
+    <content type="text"><![CDATA[8.02x - MIT Physics II: Electricity and MagnetismLectures by Walter Lewin.Ep-1 Ep-2 Ep-3 Ep-4 Ep-5 Ep-6 Ep-7 Ep-8 Ep-9 Ep-10 Ep-11 Ep-12 Ep-13 Ep-14 Ep-15 Ep-16]]></content>
       <tags>
         <tag>MIT</tag>
         <tag>Electromagnetism</tag>
         <tag>Notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ANSYS Icepak 热仿真建模专题]]></title>
-    <url>%2F2018%2F12%2F30%2FANSYS%20Icepak%20%E7%83%AD%E4%BB%BF%E7%9C%9F%E4%B8%93%E9%A2%98%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <tags>
-        <tag>ANSYS</tag>
-        <tag>Icepak</tag>
-        <tag>热分析</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[ANSYS Icepak 热仿真建模]]></title>
-    <url>%2F2018%2F12%2F29%2FANSYS%20Icepak%20%E7%83%AD%E4%BB%BF%E7%9C%9F%E5%BB%BA%E6%A8%A1%2F</url>
-    <content type="text"><![CDATA[]]></content>
-      <tags>
-        <tag>ANSYS</tag>
-        <tag>Icepak</tag>
-        <tag>热分析</tag>
       </tags>
   </entry>
   <entry>
@@ -80,17 +60,9 @@
       </tags>
   </entry>
   <entry>
-    <title><![CDATA[日记 2018.12.26]]></title>
-    <url>%2F2018%2F12%2F26%2F%E6%97%A5%E8%AE%B0%202018.12.26%2F</url>
-    <content type="text"><![CDATA[最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！ ▲ Google New Tab Page]]></content>
-      <tags>
-        <tag>Diary</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title><![CDATA[日记 2018.12.25]]></title>
-    <url>%2F2018%2F12%2F25%2F%E6%97%A5%E8%AE%B0%202018.12.25%2F</url>
-    <content type="text"><![CDATA[今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。 有人问我“你为什么自己不参与到其中去一起happy呢？”可能只是我的个人的一种爱好吧。 我并不怎么懂心理学，但我也知道其实我感受到的喜悦心情并不是什么为了掩盖自己的无奈之类的情感。 我想，可能是因为有一种快乐，能让我忘记时间，而有一种快乐，是能让我更在意时间。很庆幸自己还有时间可以度过！ ▲ 使用了快4年的手机，换张屏幕贴膜依旧看起来像新的。]]></content>
+    <title><![CDATA[Merry Christmas 2018.12.25]]></title>
+    <url>%2F2018%2F12%2F25%2FMerry%20Christmas%202018.12.25%2F</url>
+    <content type="text"><![CDATA[今天是圣诞节，我刚下课，刚刚路过公館街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。 有學生问我“你为什么自己不参与到其中去一起嗨呢？”回答不上來，只是感覺這樣也滿開心的。可能只是我的个人的一种爱好吧。 我并不怎么懂這種心態在心理学里是怎麽形容的，但我知道其实我感受到的喜悦心情并不是什么为了掩盖自己的无奈之类的情感。 我想，可能是因为有一种快乐，能让我忘记时间，而有一种快乐，是能让我更在意时间、在意美好、在意當下。所以很庆幸自己还有這樣的时间可以度过！ 加油吧！未來的自己！▲ 使用了4年的 Iphone]]></content>
       <tags>
         <tag>Diary</tag>
       </tags>

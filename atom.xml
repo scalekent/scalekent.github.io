@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://scalekent.github.io/"/>
-  <updated>2019-03-14T09:09:50.466Z</updated>
+  <updated>2019-03-14T14:03:07.385Z</updated>
   <id>http://scalekent.github.io/</id>
   
   <author>
@@ -21,15 +21,15 @@
     <link href="http://scalekent.github.io/2019/02/16/Maxwell&#39;s%20equations/"/>
     <id>http://scalekent.github.io/2019/02/16/Maxwell&#39;s equations/</id>
     <published>2019-02-16T07:40:19.000Z</published>
-    <updated>2019-03-14T09:09:50.466Z</updated>
+    <updated>2019-03-14T14:03:07.385Z</updated>
     
-    <content type="html"><![CDATA[<p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1957.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1958.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h3 id="Maxwell’s-equations"><a href="#Maxwell’s-equations" class="headerlink" title="Maxwell’s equations"></a>Maxwell’s equations</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1957.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1958.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1550133150/github/MIT%208.02/02/IMG_1957.jpg&quot; alt=&quot;&quot;&gt;&lt;br&gt;&lt;img src=&quot;https://r
+        &lt;h3 id=&quot;Maxwell’s-equations&quot;&gt;&lt;a href=&quot;#Maxwell’s-equations&quot; class=&quot;headerlink&quot; title=&quot;Maxwell’s equations&quot;&gt;&lt;/a&gt;Maxwell’s equations&lt;/h3&gt;&lt;p&gt;&lt;i
       
     
     </summary>
@@ -73,11 +73,11 @@
   </entry>
   
   <entry>
-    <title>ANSYS Icepak 从零开始的快捷键与使用技巧</title>
-    <link href="http://scalekent.github.io/2019/01/29/ANSYS%20Icepak%20%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E7%9A%84%E5%BF%AB%E6%8D%B7%E9%94%AE%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
-    <id>http://scalekent.github.io/2019/01/29/ANSYS Icepak 从零开始的快捷键与使用技巧/</id>
+    <title>ANSYS Icepak 快捷操作与使用技巧</title>
+    <link href="http://scalekent.github.io/2019/01/29/ANSYS%20Icepak%20%E5%BF%AB%E6%8D%B7%E6%93%8D%E4%BD%9C%E4%B8%8E%E4%BD%BF%E7%94%A8%E6%8A%80%E5%B7%A7/"/>
+    <id>http://scalekent.github.io/2019/01/29/ANSYS Icepak 快捷操作与使用技巧/</id>
     <published>2019-01-29T11:40:19.000Z</published>
-    <updated>2019-02-02T16:15:02.645Z</updated>
+    <updated>2019-03-14T14:00:32.674Z</updated>
     
     <content type="html"><![CDATA[<meta name="referrer" content="no-referrer"><h2 id="背景、单位修改、用户自定义库"><a href="#背景、单位修改、用户自定义库" class="headerlink" title="背景、单位修改、用户自定义库"></a>背景、单位修改、用户自定义库</h2><h4 id="背景、单位修改：-Edit-Preferences-Options-Display-or-Defaults-Units"><a href="#背景、单位修改：-Edit-Preferences-Options-Display-or-Defaults-Units" class="headerlink" title="背景、单位修改： Edit - Preferences - Options - Display or Defaults - Units"></a>背景、单位修改： <code>Edit - Preferences - Options - Display or Defaults - Units</code></h4><h4 id="材料材质导热率：-Model-Solid-材料名-Properties-Conductivity-W-m-K"><a href="#材料材质导热率：-Model-Solid-材料名-Properties-Conductivity-W-m-K" class="headerlink" title="材料材质导热率： Model - Solid - 材料名 - Properties - Conductivity (W/m-K)"></a>材料材质导热率： <code>Model - Solid - 材料名 - Properties - Conductivity (W/m-K)</code></h4><h4 id="转移模型、材料使用：-材料-模型-右键-Add-to-clipboard"><a href="#转移模型、材料使用：-材料-模型-右键-Add-to-clipboard" class="headerlink" title="转移模型、材料使用： 材料\模型 - 右键 - Add to clipboard"></a>转移模型、材料使用： <code>材料\模型 - 右键 - Add to clipboard</code></h4><h2 id="ANSYS-Icepak-界面、编辑、对齐命令"><a href="#ANSYS-Icepak-界面、编辑、对齐命令" class="headerlink" title="ANSYS Icepak 界面、编辑、对齐命令"></a>ANSYS Icepak 界面、编辑、对齐命令</h2><h4 id="点、线、面选择：-SHIFT-LEFT-MOUSE"><a href="#点、线、面选择：-SHIFT-LEFT-MOUSE" class="headerlink" title="点、线、面选择： SHIFT + LEFT MOUSE"></a>点、线、面选择： <code>SHIFT + LEFT MOUSE</code></h4><h4 id="模型实体显示：-CTRL-W"><a href="#模型实体显示：-CTRL-W" class="headerlink" title="模型实体显示： CTRL + W"></a>模型实体显示： <code>CTRL + W</code></h4>]]></content>
     
@@ -128,19 +128,19 @@
   </entry>
   
   <entry>
-    <title>Notes for MIT 8.02</title>
-    <link href="http://scalekent.github.io/2019/01/21/Notes%20for%20MIT%208.02/"/>
-    <id>http://scalekent.github.io/2019/01/21/Notes for MIT 8.02/</id>
+    <title>Notes for 8.02x - MIT Physics II Electricity and Magnetism</title>
+    <link href="http://scalekent.github.io/2019/01/21/Notes%20for%208.02x%20-%20MIT%20Physics%20II%20Electricity%20and%20Magnetism/"/>
+    <id>http://scalekent.github.io/2019/01/21/Notes for 8.02x - MIT Physics II Electricity and Magnetism/</id>
     <published>2019-01-21T07:40:19.000Z</published>
-    <updated>2019-03-14T09:56:33.028Z</updated>
+    <updated>2019-03-14T14:02:21.307Z</updated>
     
-    <content type="html"><![CDATA[<h3 id="Ep-1"><a href="#Ep-1" class="headerlink" title="Ep-1"></a>Ep-1</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/01.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/02.jpg" alt=""></p><h3 id="Ep-2"><a href="#Ep-2" class="headerlink" title="Ep-2"></a>Ep-2</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/03.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/04.jpg" alt=""></p><h3 id="Ep-3"><a href="#Ep-3" class="headerlink" title="Ep-3"></a>Ep-3</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/05.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/06.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/07.jpg" alt=""></p><h3 id="Ep-4"><a href="#Ep-4" class="headerlink" title="Ep-4"></a>Ep-4</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/08.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/09.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/10.jpg" alt=""></p><h3 id="Ep-5"><a href="#Ep-5" class="headerlink" title="Ep-5"></a>Ep-5</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1922.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1923.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1924.jpg" alt=""></p><h3 id="Ep-6"><a href="#Ep-6" class="headerlink" title="Ep-6"></a>Ep-6</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1925.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1926.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1927.jpg" alt=""></p><h3 id="Ep-7"><a href="#Ep-7" class="headerlink" title="Ep-7"></a>Ep-7</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1928.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1929.jpg" alt=""></p><h3 id="Ep-8"><a href="#Ep-8" class="headerlink" title="Ep-8"></a>Ep-8</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1930.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1931.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1932.jpg" alt=""></p><h3 id="Ep-9"><a href="#Ep-9" class="headerlink" title="Ep-9"></a>Ep-9</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1933.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1934.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1935.jpg" alt=""></p><h3 id="Ep-10"><a href="#Ep-10" class="headerlink" title="Ep-10"></a>Ep-10</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1936.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1937.jpg" alt=""></p><h3 id="Ep-11"><a href="#Ep-11" class="headerlink" title="Ep-11"></a>Ep-11</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1938.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1939.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1940.jpg" alt=""></p><h3 id="Ep-12"><a href="#Ep-12" class="headerlink" title="Ep-12"></a>Ep-12</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1941.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1942.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1943.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1944.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1945.jpg" alt=""></p><h3 id="Ep-13"><a href="#Ep-13" class="headerlink" title="Ep-13"></a>Ep-13</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1946.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1947.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1948.jpg" alt=""></p><h3 id="Ep-14"><a href="#Ep-14" class="headerlink" title="Ep-14"></a>Ep-14</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1949.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1950.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1951.jpg" alt=""></p><h3 id="Ep-15"><a href="#Ep-15" class="headerlink" title="Ep-15"></a>Ep-15</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1952.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1953.jpg" alt=""></p><h3 id="Ep-16"><a href="#Ep-16" class="headerlink" title="Ep-16"></a>Ep-16</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1954.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1955.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1956.jpg" alt=""></p>]]></content>
+    <content type="html"><![CDATA[<h4 id="8-02x-MIT-Physics-II-Electricity-and-Magnetism"><a href="#8-02x-MIT-Physics-II-Electricity-and-Magnetism" class="headerlink" title="8.02x - MIT Physics II: Electricity and Magnetism"></a>8.02x - MIT Physics II: Electricity and Magnetism</h4><h5 id="Lectures-by-Walter-Lewin"><a href="#Lectures-by-Walter-Lewin" class="headerlink" title="Lectures by Walter Lewin."></a>Lectures by Walter Lewin.</h5><h3 id="Ep-1"><a href="#Ep-1" class="headerlink" title="Ep-1"></a>Ep-1</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/01.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/02.jpg" alt=""></p><h3 id="Ep-2"><a href="#Ep-2" class="headerlink" title="Ep-2"></a>Ep-2</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/03.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/04.jpg" alt=""></p><h3 id="Ep-3"><a href="#Ep-3" class="headerlink" title="Ep-3"></a>Ep-3</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/05.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/06.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/07.jpg" alt=""></p><h3 id="Ep-4"><a href="#Ep-4" class="headerlink" title="Ep-4"></a>Ep-4</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/08.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/09.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1548511716/github/MIT%208.02/10.jpg" alt=""></p><h3 id="Ep-5"><a href="#Ep-5" class="headerlink" title="Ep-5"></a>Ep-5</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1922.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1923.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1924.jpg" alt=""></p><h3 id="Ep-6"><a href="#Ep-6" class="headerlink" title="Ep-6"></a>Ep-6</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1925.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1926.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1927.jpg" alt=""></p><h3 id="Ep-7"><a href="#Ep-7" class="headerlink" title="Ep-7"></a>Ep-7</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1928.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1929.jpg" alt=""></p><h3 id="Ep-8"><a href="#Ep-8" class="headerlink" title="Ep-8"></a>Ep-8</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1930.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1931.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1932.jpg" alt=""></p><h3 id="Ep-9"><a href="#Ep-9" class="headerlink" title="Ep-9"></a>Ep-9</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1933.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1934.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1935.jpg" alt=""></p><h3 id="Ep-10"><a href="#Ep-10" class="headerlink" title="Ep-10"></a>Ep-10</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1936.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1937.jpg" alt=""></p><h3 id="Ep-11"><a href="#Ep-11" class="headerlink" title="Ep-11"></a>Ep-11</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1938.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1939.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1940.jpg" alt=""></p><h3 id="Ep-12"><a href="#Ep-12" class="headerlink" title="Ep-12"></a>Ep-12</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1941.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1942.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1943.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1944.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1945.jpg" alt=""></p><h3 id="Ep-13"><a href="#Ep-13" class="headerlink" title="Ep-13"></a>Ep-13</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1946.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1947.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1948.jpg" alt=""></p><h3 id="Ep-14"><a href="#Ep-14" class="headerlink" title="Ep-14"></a>Ep-14</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1949.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1950.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1951.jpg" alt=""></p><h3 id="Ep-15"><a href="#Ep-15" class="headerlink" title="Ep-15"></a>Ep-15</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1952.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1953.jpg" alt=""></p><h3 id="Ep-16"><a href="#Ep-16" class="headerlink" title="Ep-16"></a>Ep-16</h3><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1954.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1955.jpg" alt=""><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1550133140/github/MIT%208.02/02/IMG_1956.jpg" alt=""></p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;h3 id=&quot;Ep-1&quot;&gt;&lt;a href=&quot;#Ep-1&quot; class=&quot;headerlink&quot; title=&quot;Ep-1&quot;&gt;&lt;/a&gt;Ep-1&lt;/h3&gt;&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/upload/v1
+        &lt;h4 id=&quot;8-02x-MIT-Physics-II-Electricity-and-Magnetism&quot;&gt;&lt;a href=&quot;#8-02x-MIT-Physics-II-Electricity-and-Magnetism&quot; class=&quot;headerlink&quot; title=&quot;
       
     
     </summary>
@@ -151,60 +151,6 @@
       <category term="Electromagnetism" scheme="http://scalekent.github.io/tags/Electromagnetism/"/>
     
       <category term="Notes" scheme="http://scalekent.github.io/tags/Notes/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ANSYS Icepak 热仿真建模专题</title>
-    <link href="http://scalekent.github.io/2018/12/30/ANSYS%20Icepak%20%E7%83%AD%E4%BB%BF%E7%9C%9F%E4%B8%93%E9%A2%98/"/>
-    <id>http://scalekent.github.io/2018/12/30/ANSYS Icepak 热仿真专题/</id>
-    <published>2018-12-30T11:45:37.000Z</published>
-    <updated>2019-01-26T11:57:30.382Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="ANSYS" scheme="http://scalekent.github.io/tags/ANSYS/"/>
-    
-      <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
-    
-      <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>ANSYS Icepak 热仿真建模</title>
-    <link href="http://scalekent.github.io/2018/12/29/ANSYS%20Icepak%20%E7%83%AD%E4%BB%BF%E7%9C%9F%E5%BB%BA%E6%A8%A1/"/>
-    <id>http://scalekent.github.io/2018/12/29/ANSYS Icepak 热仿真建模/</id>
-    <published>2018-12-29T07:41:52.000Z</published>
-    <updated>2019-01-26T11:57:34.450Z</updated>
-    
-    <content type="html"><![CDATA[<meta name="referrer" content="no-referrer">]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;meta name=&quot;referrer&quot; content=&quot;no-referrer&quot;&gt;
-      
-    
-    </summary>
-    
-    
-      <category term="ANSYS" scheme="http://scalekent.github.io/tags/ANSYS/"/>
-    
-      <category term="Icepak" scheme="http://scalekent.github.io/tags/Icepak/"/>
-    
-      <category term="热分析" scheme="http://scalekent.github.io/tags/%E7%83%AD%E5%88%86%E6%9E%90/"/>
     
   </entry>
   
@@ -239,48 +185,21 @@
   </entry>
   
   <entry>
-    <title>日记 2018.12.26</title>
-    <link href="http://scalekent.github.io/2018/12/26/%E6%97%A5%E8%AE%B0%202018.12.26/"/>
-    <id>http://scalekent.github.io/2018/12/26/日记 2018.12.26/</id>
-    <published>2018-12-26T11:27:37.000Z</published>
-    <updated>2018-12-26T11:19:20.029Z</updated>
-    
-    <content type="html"><![CDATA[<blockquote><p>最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！</p></blockquote><p><img src="https://res.cloudinary.com/scalekent/image/upload/v1545795669/github/2018.12.26.png" alt=""><br>▲ Google New Tab Page</p>]]></content>
-    
-    <summary type="html">
-    
-      
-      
-        &lt;blockquote&gt;
-&lt;p&gt;最近很累，学期末准备的东西很多，虽然说有的时候放慢一下脚步可能的确会更好，但我还是尽量勤勉吧！&lt;/p&gt;
-&lt;/blockquote&gt;
-&lt;p&gt;&lt;img src=&quot;https://res.cloudinary.com/scalekent/image/up
-      
-    
-    </summary>
-    
-    
-      <category term="Diary" scheme="http://scalekent.github.io/tags/Diary/"/>
-    
-  </entry>
-  
-  <entry>
-    <title>日记 2018.12.25</title>
-    <link href="http://scalekent.github.io/2018/12/25/%E6%97%A5%E8%AE%B0%202018.12.25/"/>
-    <id>http://scalekent.github.io/2018/12/25/日记 2018.12.25/</id>
+    <title>Merry Christmas 2018.12.25</title>
+    <link href="http://scalekent.github.io/2018/12/25/Merry%20Christmas%202018.12.25/"/>
+    <id>http://scalekent.github.io/2018/12/25/Merry Christmas 2018.12.25/</id>
     <published>2018-12-25T14:37:37.000Z</published>
-    <updated>2018-12-27T05:05:51.019Z</updated>
+    <updated>2019-03-14T13:57:55.660Z</updated>
     
-    <content type="html"><![CDATA[<p>今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。</p><blockquote><p>有人问我“你为什么自己不参与到其中去一起happy呢？”<br>可能只是我的个人的一种爱好吧。</p></blockquote><p>我并不怎么懂心理学，但我也知道其实我感受到的喜悦心情并不是什么为了掩盖自己的无奈之类的情感。</p><blockquote><p>我想，可能是因为有一种快乐，能让我忘记时间，而有一种快乐，是能让我更在意时间。<br>很庆幸自己还有时间可以度过！</p></blockquote><p><br><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545822643/github/IMG_1708.jpg" alt=""><br>▲ 使用了快4年的手机，换张屏幕贴膜依旧看起来像新的。</p>]]></content>
+    <content type="html"><![CDATA[<p>今天是圣诞节，我刚下课，刚刚路过公館街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。</p><blockquote><p>有學生问我“你为什么自己不参与到其中去一起嗨呢？”<br>回答不上來，只是感覺這樣也滿開心的。<br>可能只是我的个人的一种爱好吧。</p></blockquote><p>我并不怎么懂這種心態在心理学里是怎麽形容的，但我知道其实我感受到的喜悦心情并不是什么为了掩盖自己的无奈之类的情感。</p><blockquote><p>我想，可能是因为有一种快乐，能让我忘记时间，而有一种快乐，是能让我更在意时间、在意美好、在意當下。<br>所以很庆幸自己还有這樣的时间可以度过！</p></blockquote><h4 id="加油吧！未來的自己！"><a href="#加油吧！未來的自己！" class="headerlink" title="加油吧！未來的自己！"></a>加油吧！未來的自己！</h4><p><br><br><img src="https://res.cloudinary.com/scalekent/image/upload/v1545822643/github/IMG_1708.jpg" alt=""><br>▲ 使用了4年的 Iphone</p>]]></content>
     
     <summary type="html">
     
       
       
-        &lt;p&gt;今天是圣诞节，我刚下课，刚刚路过街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。&lt;/p&gt;
+        &lt;p&gt;今天是圣诞节，我刚下课，刚刚路过公館街道，看到那些在逛街的人真的都很开心，看到那些场景的时候，其实我的心情也很愉悦。&lt;/p&gt;
 &lt;blockquote&gt;
-&lt;p&gt;有人问我“你为什么自己不参与到其中去一起happy呢？”&lt;br&gt;可能只是我的个人的一种爱好吧。&lt;/p&gt;
-&lt;/blockq
+&lt;p&gt;有學生问我“你为什么自己不参与到其中去一起嗨呢？”&lt;br&gt;回答不上來，只是感覺這樣也滿開心的。&lt;br&gt;可能只是我的个
       
     
     </summary>
