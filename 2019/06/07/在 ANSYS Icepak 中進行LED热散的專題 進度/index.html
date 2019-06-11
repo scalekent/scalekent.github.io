@@ -75,7 +75,7 @@
 
 
 
-  <meta name="keywords" content="ANSYS,Icepak,热分析,">
+  <meta name="keywords" content="ANSYS,Icepak,热分析,專題,">
 
 
 
@@ -88,18 +88,18 @@
 
 
 
-<meta name="description" content="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）模型的初步建立对于复杂异形几何体，首选主流三维建模软体，如 UG、SOLIDWORKS、Inventor 等，在建模过程中，应该把所有 不同材质 、不同热导 的个体都作为零件来建立，然后在 组装/装配 中利用各种约束条件来搭建整体模型，在模型的建立过程中其实没有必要赋予模型 材料属性 ，因为模型最好保存为 STEP(*st">
-<meta name="keywords" content="ANSYS,Icepak,热分析">
+<meta name="description" content="模型建立、組裝與轉換模型設定鑒於我們目前設定的三變量：電流、水流速、LED間距，所以我們需要放到 ANSYS Icepak 中進行模擬的模型文件在模型組裝的差異上只有間距排布，所以在模型建立的過程中，我需要三組模型，目前設定為：LED間距分別為1.0cm、1.5cm、2.0cm排列的三組模型。 模型元件組裝模型主要分為以下幾個元件：   PVC 銅箔 導綫架 大晶粒   其中，導綫架中含有兩端">
+<meta name="keywords" content="ANSYS,Icepak,热分析,專題">
 <meta property="og:type" content="article">
-<meta property="og:title" content="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）">
-<meta property="og:url" content="http://scalekent.github.io/2019/02/14/在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）/index.html">
+<meta property="og:title" content="在 ANSYS Icepak 中進行LED热散的專題 進度">
+<meta property="og:url" content="http://scalekent.github.io/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/index.html">
 <meta property="og:site_name" content="Scale&#39;s Blog">
-<meta property="og:description" content="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）模型的初步建立对于复杂异形几何体，首选主流三维建模软体，如 UG、SOLIDWORKS、Inventor 等，在建模过程中，应该把所有 不同材质 、不同热导 的个体都作为零件来建立，然后在 组装/装配 中利用各种约束条件来搭建整体模型，在模型的建立过程中其实没有必要赋予模型 材料属性 ，因为模型最好保存为 STEP(*st">
+<meta property="og:description" content="模型建立、組裝與轉換模型設定鑒於我們目前設定的三變量：電流、水流速、LED間距，所以我們需要放到 ANSYS Icepak 中進行模擬的模型文件在模型組裝的差異上只有間距排布，所以在模型建立的過程中，我需要三組模型，目前設定為：LED間距分別為1.0cm、1.5cm、2.0cm排列的三組模型。 模型元件組裝模型主要分為以下幾個元件：   PVC 銅箔 導綫架 大晶粒   其中，導綫架中含有兩端">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-02-14T09:04:02.210Z">
+<meta property="og:updated_time" content="2019-06-08T05:43:48.680Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）">
-<meta name="twitter:description" content="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）模型的初步建立对于复杂异形几何体，首选主流三维建模软体，如 UG、SOLIDWORKS、Inventor 等，在建模过程中，应该把所有 不同材质 、不同热导 的个体都作为零件来建立，然后在 组装/装配 中利用各种约束条件来搭建整体模型，在模型的建立过程中其实没有必要赋予模型 材料属性 ，因为模型最好保存为 STEP(*st">
+<meta name="twitter:title" content="在 ANSYS Icepak 中進行LED热散的專題 進度">
+<meta name="twitter:description" content="模型建立、組裝與轉換模型設定鑒於我們目前設定的三變量：電流、水流速、LED間距，所以我們需要放到 ANSYS Icepak 中進行模擬的模型文件在模型組裝的差異上只有間距排布，所以在模型建立的過程中，我需要三組模型，目前設定為：LED間距分別為1.0cm、1.5cm、2.0cm排列的三組模型。 模型元件組裝模型主要分為以下幾個元件：   PVC 銅箔 導綫架 大晶粒   其中，導綫架中含有兩端">
 
 
 
@@ -129,13 +129,13 @@
 
 
 
-  <link rel="canonical" href="http://scalekent.github.io/2019/02/14/在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）/">
+  <link rel="canonical" href="http://scalekent.github.io/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/">
 
 
 
 
 
-  <title>在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体） | Scale's Blog</title>
+  <title>在 ANSYS Icepak 中進行LED热散的專題 進度 | Scale's Blog</title>
   
 
 
@@ -304,7 +304,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://scalekent.github.io/2019/02/14/在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）/">
+    <link itemprop="mainEntityOfPage" href="http://scalekent.github.io/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/">
 
     <span hidden itemprop="author" itemscope="" itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Scale Kent">
@@ -321,7 +321,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</h1>
+          <h1 class="post-title" itemprop="name headline">在 ANSYS Icepak 中進行LED热散的專題 進度</h1>
         
 
         <div class="post-meta">
@@ -333,8 +333,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-02-14T12:40:19+08:00">
-                2019-02-14
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-06-07T15:25:19+08:00">
+                2019-06-07
               </time>
             
 
@@ -363,7 +363,7 @@
                   <span class="post-meta-item-text">Words count in article&#58;</span>
                 
                 <span title="Words count in article">
-                  457
+                  1k
                 </span>
               
 
@@ -379,7 +379,7 @@
                   <span class="post-meta-item-text">Reading time &asymp;</span>
                 
                 <span title="Reading time">
-                  1
+                  3
                 </span>
               
             </div>
@@ -402,12 +402,34 @@
       
         <meta name="referrer" content="no-referrer">
 
-<h2 id="在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）"><a href="#在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）" class="headerlink" title="在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）"></a>在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</h2><h3 id="模型的初步建立"><a href="#模型的初步建立" class="headerlink" title="模型的初步建立"></a>模型的初步建立</h3><p>对于复杂异形几何体，首选主流三维建模软体，如 <strong><em>UG</em></strong>、<strong><em>SOLIDWORKS</em></strong>、<strong><em>Inventor</em></strong> 等，在建模过程中，应该把所有 <strong><em>不同材质</em></strong> 、<strong><em>不同热导</em></strong> 的个体都作为零件来建立，然后在 <strong><em>组装/装配</em></strong> 中利用各种约束条件来搭建整体模型，在模型的建立过程中其实没有必要赋予模型 <strong><em>材料属性</em></strong> ，因为模型最好保存为 <strong>STEP(*step)</strong> 格式，这样在 <strong>Workbench</strong> 中，才能更好地利用 <strong>DM</strong> 来转换模型，因为那样转换的资源可以最大程度地减少。</p>
-<h3 id="模型的转换"><a href="#模型的转换" class="headerlink" title="模型的转换"></a>模型的转换</h3><p>在 <strong>DM</strong> 中，导入 <strong>STEP</strong> 文件，点击 <strong>生成</strong> 后，检查模型的完整度与各契合度 ，然后使用 <strong>TOOL</strong> 中的转换工具将 <strong>模型</strong> 转化成 <strong><em>Icepak 认可</em></strong> 的实体，通过不断更改 <strong>模型等级参数</strong> 与观察 <strong>生成</strong> 后的转换模型，来匹配最接近实际情况的模型参数设置。<strong>TOOL</strong> 可以转换几个常用的 <strong>Icepak</strong> 实体与状态实体（如FAN、PCB、Opening等）。</p>
-<h3 id="Icepak模型的导入"><a href="#Icepak模型的导入" class="headerlink" title="Icepak模型的导入"></a>Icepak模型的导入</h3><p>将转换完成的模型通过 <strong>WorkBench</strong> 界面从 <strong>DM</strong> setup 至 <strong>Icepak</strong> 模块，在 <strong>Icepak</strong> 模型树下查看所有模型实体的参数并修改，以下列出常用模型实体参数的应设参数：</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
-<h4 id="主要步骤"><a href="#主要步骤" class="headerlink" title="主要步骤"></a>主要步骤</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&gt; 建立各个具有不同属性的个体零件</span><br><span class="line">&gt; 将个体零件组装成一个完整部件（各个实体均分离）</span><br><span class="line">&gt; 模型导入DM，使用TOOL转换CAD实体为Icepak认可的各类实体</span><br><span class="line">&gt; 调节模型参数，保持完整的模型外观</span><br><span class="line">&gt; 将转换后的模型通过WorkBench导入Icepak</span><br></pre></td></tr></table></figure>
-<h3 id="网格的划分"><a href="#网格的划分" class="headerlink" title="网格的划分"></a>网格的划分</h3>
+<h3 id="模型建立、組裝與轉換"><a href="#模型建立、組裝與轉換" class="headerlink" title="模型建立、組裝與轉換"></a>模型建立、組裝與轉換</h3><h4 id="模型設定"><a href="#模型設定" class="headerlink" title="模型設定"></a>模型設定</h4><p>鑒於我們目前設定的三變量：電流、水流速、LED間距，所以我們需要放到 ANSYS Icepak 中進行模擬的模型文件在模型組裝的差異上只有間距排布，所以在模型建立的過程中，我需要三組模型，目前設定為：LED間距分別為1.0cm、1.5cm、2.0cm排列的三組模型。</p>
+<h4 id="模型元件組裝"><a href="#模型元件組裝" class="headerlink" title="模型元件組裝"></a>模型元件組裝</h4><p>模型主要分為以下幾個元件：</p>
+<blockquote>
+<ol>
+<li>PVC</li>
+<li>銅箔</li>
+<li>導綫架</li>
+<li>大晶粒</li>
+</ol>
+</blockquote>
+<p>其中，導綫架中含有兩端突出的引腳。</p>
+<p>分別將PVC、銅箔、大晶粒的零件模型建立好之後，在 SolidWorks/UG NX 中縫合表面，使其成為一個實體。導綫架在完成繪製后，將大晶粒貼至導綫架的圓盤中心，與大晶粒先組裝成一個LED組裝件。接下來組裝完整件：在PVC的表面貼上間距相同的6片銅箔，在完全對齊后，以PVC中段為參考點，分別在第一條銅箔的中綫左側貼上一個LED組裝件，然後在第二條銅箔的中綫右側貼上一個LED組裝件，以此循環，將中綫一圈的LED組裝件貼合完成。</p>
+<p>在保存完6排單個LED組件的模型文件后，重新進入 SolidWorks/UG，分別以1.0cm、1.5cm、2.0cm的間距環狀陣列LED組裝件，在檢查完所有的元件都以表面貼合的形式組裝后，我們保存為三個組裝件模型文件：</p>
+<blockquote>
+<p>1.0cm間距的組裝件 （PVC+銅箔+導綫架+大晶粒）</p>
+<p>1.5cm間距的組裝件 （PVC+銅箔+導綫架+大晶粒）</p>
+<p>2.0cm間距的組裝件 （PVC+銅箔+導綫架+大晶粒）</p>
+</blockquote>
+<h4 id="模型轉換與導入Icepak"><a href="#模型轉換與導入Icepak" class="headerlink" title="模型轉換與導入Icepak"></a>模型轉換與導入Icepak</h4><p>我們首先將1.0cm間距的組裝件導入到了 Workbench 的 DM 中進行初步轉換，但發現在模型轉換過程中，因為精度的關係，導致導綫架的貼體模型分裂了，考慮到轉換過程中，因為各類建模軟體之間的通用文件格式在模型導入計算上都有所不同，所以我們決定先將導綫架這樣的異形幾何體在 SolidWorks/UG NX 中先修面，在確保每個面之間的配合后，縫合各面轉化為實體，但因為導綫架包含了兩段突出的引腳，所以在縫合過程中，我們把兩個引腳作為了兩個實體，導綫架本身作為一個實體，大晶粒作為一個實體，重新組裝成一個組裝件，再次進行模型的組裝與導出。分別導出了三種文件格式：.step、.x_t、.igs，其中.igs為無法被更改的通用模型格式，這在一些程度上可以杜絶在不同軟體、設備上用建模軟體加載模型所會出現的各種誤差。</p>
+<p>在導入 ANSYS Icepak 的模型中，我們目前以.step及.igs為主，如果在之後會出現一些不可預期的狀況，再考慮使用其他的模型格式。</p>
+<p>將模型文件導入 DM 之後，在 Tools - Electronics 中選擇類型（Simplify、Fan、Opening、Grille、Icepak Enclosure等）來轉化到 Icepak 能認可的元件，在這裏，我們全部選用 Simplify 來轉化各個元件（包括CAD體），各元件的轉換等級分別為：</p>
+<blockquote>
+<p>Level 2 (Polygon fit)：PVC、大晶粒</p>
+<p>Level 3 (CAD object)：銅箔、引腳、導綫架本體</p>
+</blockquote>
+<p>在轉換完成后，將 DM 的 Geometry 模塊拖入 Icepak 模塊，完成在 Icepak 中的模型導入。在 Icepak 中進行了一次簡單的網格劃分，初步顯示效果良好，之後將進一步進行多級網格的劃分。但在 Icepak 中，因為軟體計算的精度有限，導致有些 CAD實體 有重合的現象（特別是PVC與銅箔的貼合），我們正在進步一步確定其影響性與設法修復這個問題。</p>
+<h4 id="設定相關參數（導熱係數等）"><a href="#設定相關參數（導熱係數等）" class="headerlink" title="設定相關參數（導熱係數等）"></a>設定相關參數（導熱係數等）</h4><p>目前正在進行相關導熱係數等參數的查詢與設定。</p>
+
       
     </div>
     
@@ -420,6 +442,35 @@
       <div>
       
         
+<div class="my_post_copyright">
+  <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
+  
+  <!-- JS库 sweetalert 可修改路径 -->
+  <script src="https://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <p><span>本文标题:</span><a href="/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/">在 ANSYS Icepak 中進行LED热散的專題 進度</a></p>
+  <p><span>文章作者:</span><a href="/" title="访问 Scale Kent 的个人博客">Scale Kent</a></p>
+  <p><span>发布时间:</span>2019年06月07日 - 15:06</p>
+  <p><span>最后更新:</span>2019年06月08日 - 13:06</p>
+  <p><span>原始链接:</span><a href="/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/" title="在 ANSYS Icepak 中進行LED热散的專題 進度">http://scalekent.github.io/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/</a>
+    <span class="copy-path" title="点击复制文章链接"><i class="fa fa-clipboard" data-clipboard-text="http://scalekent.github.io/2019/06/07/在 ANSYS Icepak 中進行LED热散的專題 進度/" aria-label="复制成功！"></i></span>
+  </p>
+  <p><span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="https://creativecommons.org/licenses/by-nc-nd/4.0/" target="_blank" title="Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0)">署名-非商业性使用-禁止演绎 4.0 国际</a> 转载请保留原文链接及作者。</p>  
+</div>
+<script> 
+    var clipboard = new Clipboard('.fa-clipboard');
+    $(".fa-clipboard").click(function(){
+      clipboard.on('success', function(){
+        swal({   
+          title: "",   
+          text: '复制成功',
+          icon: "success", 
+          showConfirmButton: true
+          });
+    });
+    });  
+</script>
+
 
       
       </div>
@@ -467,6 +518,8 @@
           
             <a href="/tags/热分析/" rel="tag"><i class="fa fa-tag"></i> 热分析</a>
           
+            <a href="/tags/專題/" rel="tag"><i class="fa fa-tag"></i> 專題</a>
+          
         </div>
       
 
@@ -478,8 +531,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2019/01/29/ANSYS Icepak 快捷操作与使用技巧/" rel="next" title="ANSYS Icepak 快捷操作与使用技巧">
-                <i class="fa fa-chevron-left"></i> ANSYS Icepak 快捷操作与使用技巧
+              <a href="/2019/04/10/在 ANSYS Icepak 中進行LED热散的專題計劃（LED為异形几何体）/" rel="next" title="在 ANSYS Icepak 中進行LED热散的專題計劃（LED為异形几何体）">
+                <i class="fa fa-chevron-left"></i> 在 ANSYS Icepak 中進行LED热散的專題計劃（LED為异形几何体）
               </a>
             
           </div>
@@ -487,10 +540,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2019/02/16/Maxwell's equations/" rel="prev" title="Maxwell's equations">
-                Maxwell's equations <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -578,7 +627,7 @@
               
               <div class="site-state-item site-state-tags">
                 <a href="/tags/index.html">
-                  <span class="site-state-item-count">14</span>
+                  <span class="site-state-item-count">15</span>
                   <span class="site-state-item-name">tags</span>
                 </a>
               </div>
@@ -672,7 +721,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#在-ANSYS-Icepak-中建立热散的初步思想（对于复杂异形几何体）"><span class="nav-number">1.</span> <span class="nav-text">在 ANSYS Icepak 中建立热散的初步思想（对于复杂异形几何体）</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#模型的初步建立"><span class="nav-number">1.1.</span> <span class="nav-text">模型的初步建立</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#模型的转换"><span class="nav-number">1.2.</span> <span class="nav-text">模型的转换</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Icepak模型的导入"><span class="nav-number">1.3.</span> <span class="nav-text">Icepak模型的导入</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#主要步骤"><span class="nav-number">1.3.1.</span> <span class="nav-text">主要步骤</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#网格的划分"><span class="nav-number">1.4.</span> <span class="nav-text">网格的划分</span></a></li></ol></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#模型建立、組裝與轉換"><span class="nav-number">1.</span> <span class="nav-text">模型建立、組裝與轉換</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#模型設定"><span class="nav-number">1.1.</span> <span class="nav-text">模型設定</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型元件組裝"><span class="nav-number">1.2.</span> <span class="nav-text">模型元件組裝</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#模型轉換與導入Icepak"><span class="nav-number">1.3.</span> <span class="nav-text">模型轉換與導入Icepak</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#設定相關參數（導熱係數等）"><span class="nav-number">1.4.</span> <span class="nav-text">設定相關參數（導熱係數等）</span></a></li></ol></li></ol></div>
             
 
           </div>
@@ -709,7 +758,7 @@
     
       <span class="post-meta-item-text">Site words total count&#58;</span>
     
-    <span title="Site words total count">14k</span>
+    <span title="Site words total count">16.1k</span>
   
 </div>
 
